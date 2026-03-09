@@ -25,18 +25,18 @@ const statusText = document.getElementById('statusText');
 // Create flow steps UI
 function createFlowSteps() {
     if (!flowContainer) return;
-    
+
     steps.forEach((step, index) => {
         const stepDiv = document.createElement('div');
         stepDiv.className = 'flow-step';
         stepDiv.id = `step-${index}`;
         stepDiv.innerHTML = `
-            <div class="step-icon ${step.type}">${step.icon}</div>
-            <div class="step-content ${step.type}">
-                <div class="step-title">${step.title}</div>
-                <div class="step-desc">${step.desc}</div>
-            </div>
-        `;
+<div class="step-icon ${step.type}">${step.icon}</div>
+<div class="step-content ${step.type}">
+    <div class="step-title">${step.title}</div>
+    <div class="step-desc">${step.desc}</div>
+</div>
+`;
         flowContainer.appendChild(stepDiv);
     });
 }
@@ -51,16 +51,16 @@ function activateStep(index) {
 // Show initialization screen
 function showInitScreen() {
     if (!sceneStage) return;
-    
+
     sceneStage.innerHTML = `
-        <div class="init-screen active">
-            <div class="init-icon">⚙️</div>
-            <div class="init-text">Initializing Abserny...</div>
-            <div class="init-progress">
-                <div class="init-progress-bar"></div>
-            </div>
-        </div>
-    `;
+<div class="init-screen active">
+    <div class="init-icon">⚙️</div>
+    <div class="init-text">Initializing Abserny...</div>
+    <div class="init-progress">
+        <div class="init-progress-bar"></div>
+    </div>
+</div>
+`;
     if (statusText) statusText.textContent = 'Initializing...';
 }
 
@@ -77,7 +77,7 @@ function animateHeroDetections() {
         setTimeout(() => {
             box.style.opacity = "1";
             box.style.animation = "boxDraw 0.6s ease forwards";
-        }, index * 700); 
+        }, index * 700);
     });
 }
 
@@ -89,51 +89,51 @@ setInterval(animateHeroDetections, 2300);
 // Show listening screen
 function showListeningScreen() {
     if (!sceneStage) return;
-    
+
     sceneStage.innerHTML = `
-        <div class="listening-screen active">
-            <div class="mic-icon-large">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2">
-                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                    <line x1="12" y1="19" x2="12" y2="23"/>
-                </svg>
-            </div>
-            <div class="listening-text">Listening...</div>
-            <div class="trigger-words">Say: "start", "detect", "see", or "look"</div>
-        </div>
-    `;
+<div class="listening-screen active">
+    <div class="mic-icon-large">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+        </svg>
+    </div>
+    <div class="listening-text">Listening...</div>
+    <div class="trigger-words">Say: "start", "detect", "see", or "look"</div>
+</div>
+`;
     if (statusText) statusText.textContent = 'Listening for voice command';
 }
 
 // Show voice command screen
 function showVoiceCommandScreen() {
     if (!sceneStage) return;
-    
+
     sceneStage.innerHTML = `
-        <div class="voice-command-screen active">
-            <div class="voice-wave">
-                <div class="voice-circle"></div>
-                <div class="voice-circle"></div>
-                <div class="voice-circle"></div>
-            </div>
-            <div class="voice-text">"START"</div>
-            <div class="trigger-words">Command recognized!</div>
-        </div>
-    `;
+<div class="voice-command-screen active">
+    <div class="voice-wave">
+        <div class="voice-circle"></div>
+        <div class="voice-circle"></div>
+        <div class="voice-circle"></div>
+    </div>
+    <div class="voice-text">"START"</div>
+    <div class="trigger-words">Command recognized!</div>
+</div>
+`;
     if (statusText) statusText.textContent = 'Voice command detected';
 }
 
 // Show detection screen
 function showDetectionScreen() {
     if (!sceneStage) return;
-    
+
     sceneStage.innerHTML = `
-        <div class="detection-screen active">
-            <div class="camera-flash" id="cameraFlash"></div>
-            <div id="detectionsContainer"></div>
-        </div>
-    `;
+<div class="detection-screen active">
+    <div class="camera-flash" id="cameraFlash"></div>
+    <div id="detectionsContainer"></div>
+</div>
+`;
     if (statusText) statusText.textContent = 'Detecting objects...';
 
     const flash = document.getElementById('cameraFlash');
@@ -170,34 +170,34 @@ function showDetectionScreen() {
 // Show speak screen
 function showSpeakScreen() {
     if (!sceneStage) return;
-    
+
     const existingContent = sceneStage.innerHTML;
     sceneStage.innerHTML = existingContent + `
-        <div class="audio-wave active">
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-        </div>
-        <div class="result-text active">
-            📊 "I see a person, a laptop, and a cup"
-        </div>
-    `;
+<div class="audio-wave active">
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+</div>
+<div class="result-text active">
+📊 "I see a person, a laptop, and a cup"
+</div>
+`;
     if (statusText) statusText.textContent = 'Speaking result...';
 }
 
 // Show complete screen
 function showCompleteScreen() {
     if (!sceneStage) return;
-    
+
     sceneStage.innerHTML = `
-        <div class="complete-screen active">
-            <div class="complete-icon">✔</div>
-            <div class="complete-text">Detection Complete</div>
-            <div class="cooldown-timer">3-second cooldown active</div>
-        </div>
-    `;
+<div class="complete-screen active">
+    <div class="complete-icon">✔</div>
+    <div class="complete-text">Detection Complete</div>
+    <div class="cooldown-timer">3-second cooldown active</div>
+</div>
+`;
     if (statusText) statusText.textContent = 'Ready for next command';
 }
 

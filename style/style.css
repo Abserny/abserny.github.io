@@ -311,6 +311,7 @@ section {
 .tech-grid,
 .values-grid {
     display: grid;
+    text-align: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
@@ -546,14 +547,14 @@ section {
 }
 
 @keyframes boxDraw {
-  from {
+from {
     opacity: 0;
     transform: scale(0.7);
-  }
-  to {
+}
+to {
     opacity: 1;
     transform: scale(1);
-  }
+}
 }
 
 
@@ -1012,6 +1013,7 @@ to { opacity: 1; transform: translateY(0); }
 
     .footer-links-grid {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 }
 
@@ -1295,7 +1297,7 @@ to { opacity: 1; transform: translateY(0); }
 
 /* === Responsive Updates === */
 @media (max-width: 968px) {
-   min .releases-grid {
+    min .releases-grid {
         grid-template-columns: 1fr;
     }
 
