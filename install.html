@@ -70,6 +70,53 @@
                 </div>
             </section>
 
+            <!-- Stats Strip -->
+            <section class="stats-strip-section">
+                <div class="container">
+                    <div class="stats-strip">
+
+                        <div class="stat-cell stat-cell--highlight">
+                            <span class="stat-label">Total Downloads</span>
+                            <span class="stat-value" id="dlCountInner">—</span>
+                            <span class="stat-sub" id="dlCountSub">live · GitHub</span>
+                        </div>
+
+                        <div class="stat-divider"></div>
+
+                        <div class="stat-cell">
+                            <span class="stat-label">Median Latency</span>
+                            <span class="stat-value">1,430<span class="stat-unit">ms</span></span>
+                            <span class="stat-sub">online · Gemini</span>
+                        </div>
+
+                        <div class="stat-divider"></div>
+
+                        <div class="stat-cell">
+                            <span class="stat-label">Offline Latency</span>
+                            <span class="stat-value">380<span class="stat-unit">ms</span></span>
+                            <span class="stat-sub">ML Kit fallback</span>
+                        </div>
+
+                        <div class="stat-divider"></div>
+
+                        <div class="stat-cell">
+                            <span class="stat-label">Spatial Term Rate</span>
+                            <span class="stat-value">87<span class="stat-unit">%</span></span>
+                            <span class="stat-sub">directions in output</span>
+                        </div>
+
+                        <div class="stat-divider"></div>
+
+                        <div class="stat-cell">
+                            <span class="stat-label">Detection Modes</span>
+                            <span class="stat-value">4</span>
+                            <span class="stat-sub">Scene · Object · Read · People</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
             <!-- What's Included -->
             <section>
                 <div class="container">
@@ -305,7 +352,6 @@
             </div>
         </footer>
 
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script>
         // Hamburger
         const hamburger = document.getElementById('hamburger');
@@ -320,7 +366,40 @@
                 nav.classList.remove('open');
             });
         });
+
+        // ── Download Counter via GitHub Releases API ──────────────────
+        (async () => {
+            const el    = document.getElementById('dlCountInner');
+            const sub   = document.getElementById('dlCountSub');
+            const OWNER = 'Abserny';
+            const REPO  = 'Abserny';
+            try {
+                const res = await fetch(
+                    `https://api.github.com/repos/${OWNER}/${REPO}/releases`,
+                    { headers: { Accept: 'application/vnd.github+json' } }
+                );
+                if (!res.ok) throw new Error();
+                const releases = await res.json();
+                let total = 0;
+                releases.forEach(r => r.assets.forEach(a => { total += a.download_count; }));
+
+                // Count-up animation
+                const duration = 1600;
+                const start = performance.now();
+                const tick = (now) => {
+                    const p = Math.min((now - start) / duration, 1);
+                    const ease = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.floor(ease * total).toLocaleString();
+                    if (p < 1) requestAnimationFrame(tick);
+                    else el.textContent = total.toLocaleString();
+                };
+                requestAnimationFrame(tick);
+                sub.textContent = `${releases.length} release${releases.length !== 1 ? 's' : ''} · GitHub`;
+            } catch {
+                el.textContent = '—';
+                sub.textContent = 'unavailable';
+            }
+        })();
         </script>
     </body>
 </html>
-

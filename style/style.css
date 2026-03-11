@@ -1263,7 +1263,7 @@ to   { opacity: 1; transform: translateY(0); }
     gap: var(--spacing-sm);
 }
 
-/* === Install/Coming Soon Page Styles === */
+/* === Install === */
 .coming-soon-page {
     min-height: calc(100vh - var(--header-height));
     display: flex;
@@ -1455,6 +1455,7 @@ to   { opacity: 1; transform: translateY(0); }
 
 /* === Mobile App Release Page === */
 .mobile-release-hero {
+    margin-top: -60px;
     padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);
     text-align: center;
 }
@@ -2802,5 +2803,116 @@ ABOUT PAGE — RESPONSIVE
 
     .team-grid-new {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+STATS STRIP — install page
+============================================================ */
+
+.stats-strip-section {
+    padding: 0 0 var(--spacing-lg);
+}
+
+.stats-strip {
+    display: flex;
+    align-items: stretch;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.stat-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.75rem 2rem;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.stat-cell:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+/* highlighted cell — the live download counter */
+.stat-cell--highlight {
+    background: rgba(96,165,250,0.07);
+}
+
+.stat-cell--highlight:hover {
+    background: rgba(96,165,250,0.11);
+}
+
+.stat-label {
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
+
+.stat-cell--highlight .stat-label {
+    color: var(--accent-blue);
+}
+
+.stat-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-unit {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    letter-spacing: 0;
+    margin-left: 2px;
+}
+
+.stat-sub {
+    font-size: 0.68rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.02em;
+}
+
+.stat-divider {
+    width: 1px;
+    background: var(--card-border);
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+@media (max-width: 968px) {
+    .stats-strip {
+        flex-wrap: wrap;
+    }
+    .stat-cell {
+        flex: 1 1 calc(50% - 1px);
+        min-width: 140px;
+    }
+    .stat-divider {
+        display: none;
+    }
+    .stats-strip {
+        gap: 1px;
+        background: var(--card-border);
+    }
+    .stat-cell {
+        background: var(--bg-navy);
+    }
+    .stat-cell--highlight {
+        background: rgba(96,165,250,0.07);
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-cell {
+        flex: 1 1 100%;
     }
 }
