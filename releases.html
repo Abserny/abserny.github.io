@@ -23,13 +23,18 @@
                     <a href="index.html" class="logo">
                         <img src="assets/images/absernyy.png" alt="Abserny Logo" width="120">
                     </a>
-                    <nav>
+                    <nav id="mainNav">
                         <a href="index.html">Home</a>
                         <a href="releases.html" class="active">Releases</a>
                         <a href="about.html">About</a>
                         <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
                         <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
                     </nav>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </header>
@@ -134,7 +139,7 @@
                         <div class="footer-links-column">
                             <h4>Contact</h4>
                             <ul>
-                                <li><a href="mailto:contact@abserny.com">contact@abserny.com</a></li>
+                                <li><a href="/cdn-cgi/l/email-protection#a7c4c8c9d3c6c4d3e7c6c5d4c2d5c9de89c4c8ca"><span class="__cf_email__" data-cfemail="81e2eeeff5e0e2f5c1e0e3f2e4f3eff8afe2eeec">[email&#160;protected]</span></a></li>
                                 <li><a href="https://discord.gg/your-invite" target="_blank">Discord</a></li>
                                 <li><a href="https://twitter.com/abserny" target="_blank">@abserny</a></li>
                             </ul>
@@ -159,10 +164,20 @@
                         </a>
                         <a href="https://twitter.com/abserny" aria-label="Twitter">
                             <span class="line-md--twitter-x"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                            <script src="main.js"></script>
+                            <script>
+                            const hamburger = document.getElementById('hamburger');
+                            const nav = document.getElementById('mainNav');
+                            hamburger.addEventListener('click', () => {
+                                hamburger.classList.toggle('open');
+                                nav.classList.toggle('open');
+                            });
+                            nav.querySelectorAll('a').forEach(link => {
+                                link.addEventListener('click', () => {
+                                    hamburger.classList.remove('open');
+                                    nav.classList.remove('open');
+                                });
+                            });
+                            </script>
     </body>
 </html>

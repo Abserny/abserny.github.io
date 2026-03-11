@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Abserny Mobile - Coming Soon</title>
-        <meta name="description" content="Get notified when Abserny mobile app launches. Bringing voice-activated object detection to your smartphone.">
+        <title>Abserny Mobile - Download</title>
+        <meta name="description" content="Download Abserny for iOS and Android. Voice-activated offline object detection for the visually impaired, now on mobile.">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,90 +23,176 @@
                     <a href="index.html" class="logo">
                         <img src="assets/images/absernyy.png" alt="Abserny Logo" width="120">
                     </a>
-                    <nav>
+                    <nav id="mainNav">
                         <a href="index.html">Home</a>
                         <a href="releases.html">Releases</a>
                         <a href="about.html">About</a>
                         <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
                         <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
                     </nav>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </header>
 
         <main>
-            <!-- Coming Soon Hero -->
-            <section class="coming-soon-page">
+            <!-- Hero -->
+            <section class="mobile-release-hero">
                 <div class="container">
-                    <div class="coming-soon-content">
-                        <div class="mobile-icon">📱</div>
-                        <h1>Mobile App Coming Soon</h1>
-                        <p>
-                            We're working hard on the Abserny mobile experience. The app will bring the full power of offline object detection and voice feedback directly to your smartphone.
-                        </p>
+                    <span class="release-version">v1.0.0 — Now Available</span>
+                    <h1>Abserny Mobile</h1>
+                    <p>
+                        The full power of offline object detection and natural voice feedback,
+                        now in your pocket. Available for Android — iOS coming soon.
+                    </p>
 
-                        <div class="features-preview">
-                            <div class="preview-item">
-                                <span class="preview-icon">⚡</span>
-                                <h3>Optimized Performance</h3>
-                                <p>Mobile-optimized YOLOv8 for fast inference on device</p>
+                    <div class="download-buttons">
+                        <a href="https://github.com/Abserny/Abserny/releases" class="download-btn btn-store" target="_blank">
+                            <span class="download-btn-icon">🤖</span>
+                            <span class="download-btn-text">
+                                <small>Get it on</small>
+                                <strong>Android / APK</strong>
+                            </span>
+                        </a>
+                        <a href="https://github.com/Abserny/Abserny/releases" class="download-btn btn-apk" target="_blank">
+                            <span class="download-btn-icon">📦</span>
+                            <span class="download-btn-text">
+                                <small>Direct Download</small>
+                                <strong>Release APK</strong>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What's New -->
+            <section>
+                <div class="container">
+                    <h2 class="section-title">What's in This Release</h2>
+                    <p class="section-intro">Everything from the desktop version, rebuilt for mobile with performance and accessibility at its core.</p>
+
+                    <div class="release-highlights">
+                        <div class="highlight-card">
+                            <span class="highlight-icon">⚡</span>
+                            <h3>Optimized Inference</h3>
+                            <p>Mobile-tuned YOLOv8 nano runs entirely on-device — no internet, no cloud, no delay.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">🎙️</span>
+                            <h3>Voice Activation</h3>
+                            <p>Hands-free operation with offline Vosk speech recognition. Say "start" and Abserny responds.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">📳</span>
+                            <h3>Haptic Feedback</h3>
+                            <p>Vibration patterns complement voice output for richer, more accessible environmental awareness.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">🔋</span>
+                            <h3>Battery Efficient</h3>
+                            <p>Smart listening mode pauses processing when idle, preserving battery for all-day use.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">🔒</span>
+                            <h3>Fully Private</h3>
+                            <p>All processing is local. No data leaves your device — ever. No accounts, no tracking.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">🗣️</span>
+                            <h3>Natural Language Output</h3>
+                            <p>Hear clear, conversational descriptions like "I see a person on your left and a chair ahead."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requirements -->
+            <section>
+                <div class="container">
+                    <div class="requirements-section">
+                        <h2>System Requirements</h2>
+                        <div class="req-grid">
+                            <div class="req-item">
+                                <h4>🤖 Android</h4>
+                                <p>Android 8.0 (Oreo) or higher<br>2 GB RAM minimum, 4 GB recommended<br>~300 MB storage for app + model</p>
                             </div>
-                            <div class="preview-item">
-                                <span class="preview-icon">🔋</span>
-                                <h3>Battery Efficient</h3>
-                                <p>Smart listening mode that conserves battery life</p>
+                            <div class="req-item">
+                                <h4>🍎 iOS</h4>
+                                <p>iOS 15 or higher<br>iPhone 8 or newer recommended<br>Coming soon — follow GitHub for updates</p>
                             </div>
-                            <div class="preview-item">
-                                <span class="preview-icon">📳</span>
-                                <h3>Haptic Feedback</h3>
-                                <p>Touch and vibration feedback for enhanced accessibility</p>
+                            <div class="req-item">
+                                <h4>📷 Camera</h4>
+                                <p>Rear camera required for object detection<br>Works best with 12 MP or higher</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>🎤 Microphone</h4>
+                                <p>Required for voice activation<br>Works with built-in and external mics</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <div class="notify-section">
-                            <h2>Get Notified</h2>
-                            <p>Stay tuned — we'll announce it on our GitHub and documentation site when it's ready.</p>
-                            <div class="notify-buttons">
-                                <a href="https://github.com/Abserny" class="btn-primary" target="_blank">Watch on GitHub</a>
-                                <a href="https://abserny.github.io/abserny.org/updates" class="btn-secondary" target="_blank">Follow Updates</a>
-                            </div>
-                        </div>
-
-                        <div class="status-info">
-                            <h3>Development Status</h3>
+            <!-- Release Timeline -->
+            <section>
+                <div class="container">
+                    <h2 class="section-title">Release Timeline</h2>
+                    <div class="coming-soon-content" style="margin: 0 auto;">
+                        <div class="status-info" style="margin-top: 0;">
                             <div class="status-timeline">
                                 <div class="status-item completed">
                                     <span class="status-marker">✓</span>
                                     <div class="status-content">
-                                        <h4>Core Application</h4>
-                                        <p>Desktop version released and tested</p>
+                                        <h4>Core Desktop Application</h4>
+                                        <p>Released December 2024 — v1.0.2</p>
+                                    </div>
+                                </div>
+                                <div class="status-item completed">
+                                    <span class="status-marker">✓</span>
+                                    <div class="status-content">
+                                        <h4>Mobile Development</h4>
+                                        <p>Optimized for Android and iOS — complete</p>
+                                    </div>
+                                </div>
+                                <div class="status-item completed">
+                                    <span class="status-marker">✓</span>
+                                    <div class="status-content">
+                                        <h4>Beta Testing</h4>
+                                        <p>Internal testing and accessibility validation — complete</p>
                                     </div>
                                 </div>
                                 <div class="status-item active">
-                                    <span class="status-marker">⏳</span>
+                                    <span class="status-marker">✓</span>
                                     <div class="status-content">
-                                        <h4>Mobile Development</h4>
-                                        <p>Currently optimizing for iOS and Android</p>
+                                        <h4>Android Public Release</h4>
+                                        <p>Available now — download above</p>
                                     </div>
                                 </div>
                                 <div class="status-item">
                                     <span class="status-marker">○</span>
                                     <div class="status-content">
-                                        <h4>Beta Testing</h4>
-                                        <p>Expected Q1 2026</p>
-                                    </div>
-                                </div>
-                                <div class="status-item">
-                                    <span class="status-marker">○</span>
-                                    <div class="status-content">
-                                        <h4>Public Release</h4>
-                                        <p>Expected Early 2026</p>
+                                        <h4>iOS Public Release</h4>
+                                        <p>In progress — follow GitHub for updates</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <a href="index.html" class="back-link">← Back to Home</a>
+            <!-- CTA -->
+            <section class="vision-section">
+                <div class="container">
+                    <h2>Stay Up to Date</h2>
+                    <p>Watch the repository for iOS release updates, bug fixes, and new model versions.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                        <a href="https://github.com/Abserny" class="btn-primary" target="_blank">Watch on GitHub</a>
+                        <a href="releases.html" class="btn-secondary">See All Releases</a>
                     </div>
                 </div>
             </section>
@@ -141,7 +227,7 @@
                         <div class="footer-links-column">
                             <h4>Resources</h4>
                             <ul>
-                                <li><a href="https://github.com/Abserny" target="_blank">GitHub Repository</a></li>
+                                <li><a href="https://github.com/Abserny/Abserny" target="_blank">GitHub Repository</a></li>
                                 <li><a href="https://github.com/Abserny/issues" target="_blank">Report Issue</a></li>
                                 <li><a href="https://docs.abserny.com" target="_blank">Documentation</a></li>
                             </ul>
@@ -179,5 +265,21 @@
                 </div>
             </div>
         </footer>
+
+        <script src="main.js"></script>
+        <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('mainNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                nav.classList.remove('open');
+            });
+        });
+        </script>
     </body>
 </html>

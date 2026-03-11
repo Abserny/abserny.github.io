@@ -71,11 +71,57 @@ body::before {
 
 /* === Container === */
 .container-header {
-    min-width: var(--container-width);
+    max-width: var(--container-width);
+    width: 100%;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
     position: relative;
     z-index: 1;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 8px;
+    transition: background var(--transition-fast);
+    z-index: 200;
+}
+
+.hamburger:hover {
+    background: var(--accent-blue-dim);
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all var(--transition-normal);
+    transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .container {
@@ -985,6 +1031,40 @@ to { opacity: 1; transform: translateY(0); }
 
     nav {
         display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--card-border);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+        z-index: 99;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 1.05rem;
+        padding: 0.6rem 0.5rem;
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .github {
+        display: inline-flex;
+        width: fit-content;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .footer-bottom {
@@ -1295,7 +1375,226 @@ to { opacity: 1; transform: translateY(0); }
     transform: translateX(-5px);
 }
 
-/* === Responsive Updates === */
+/* === Mobile App Release Page === */
+.mobile-release-hero {
+    padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);
+    text-align: center;
+}
+
+.mobile-release-hero h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mobile-release-hero .release-version {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--spacing-md);
+}
+
+.mobile-release-hero p {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.8;
+}
+
+.download-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+}
+
+.download-btn.btn-store {
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+}
+
+.download-btn.btn-store:hover {
+    background: #93c5fd;
+}
+
+.download-btn.btn-apk {
+    background: var(--accent-blue-dim);
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+.download-btn.btn-apk:hover {
+    background: rgba(96, 165, 250, 0.25);
+}
+
+.download-btn-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.download-btn-text small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.download-btn-text strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.app-screenshots {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin: var(--spacing-xl) 0;
+    flex-wrap: wrap;
+}
+
+.screenshot-placeholder {
+    width: 180px;
+    height: 320px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    transition: border-color var(--transition-normal);
+}
+
+.screenshot-placeholder:hover {
+    border-color: var(--accent-blue);
+}
+
+.screenshot-placeholder span {
+    font-size: 2.5rem;
+}
+
+.release-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.highlight-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: var(--spacing-md);
+    text-align: left;
+    transition: border-color var(--transition-normal);
+}
+
+.highlight-card:hover {
+    border-color: var(--accent-blue);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.highlight-card h3 {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.highlight-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.requirements-section {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+    text-align: left;
+}
+
+.requirements-section h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.req-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.req-item h4 {
+    color: var(--accent-blue);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.req-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .req-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-screenshots {
+        gap: var(--spacing-sm);
+    }
+
+    .screenshot-placeholder {
+        width: 140px;
+        height: 250px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 968px) {
     min .releases-grid {
         grid-template-columns: 1fr;
