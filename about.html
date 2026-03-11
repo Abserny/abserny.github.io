@@ -4,19 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Abserny - Our Team & Vision</title>
-        <meta name="description" content="Learn about the Abserny team and our mission to create accessible AI tools for the visually impaired.">
-
-        <!-- Fonts -->
+        <meta name="description" content="Learn about the Abserny team and our mission to create a fully voice-first AI assistive tool for the visually impaired.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/all.min.css">
     </head>
     <body>
-        <!-- Header -->
+
         <header>
             <div class="container-header">
                 <div class="header-content">
@@ -27,169 +23,238 @@
                         <a href="index.html">Home</a>
                         <a href="releases.html">Releases</a>
                         <a href="about.html" class="active">About</a>
-                        <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
+                        <div class="nav-end-group">
+                            <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
+                        </div>
                     </nav>
                     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span></span><span></span><span></span>
                     </button>
                 </div>
             </div>
         </header>
 
         <main>
-            <!-- Hero -->
-            <section class="about-hero">
+
+            <!-- ══ TEAM BANNER HERO ══════════════════════════════════ -->
+            <section class="tb-hero">
+                <div class="tb-photo-wrap">
+                    <img src="assets/images/fb.jpg" alt="The Abserny team" class="tb-photo">
+                    <!-- layered overlays: blur + dark gradient -->
+                    <div class="tb-blur"></div>
+                    <div class="tb-gradient"></div>
+                </div>
+
+                <div class="tb-content">
+                    <span class="tb-eyebrow">Faculty of Specific Education &mdash; CS Department &mdash; 2025&ndash;2026</span>
+                    <blockquote class="tb-quote">
+                        &ldquo;We built it for the person who picks it up alone, in the dark, for the first time.&rdquo;
+                    </blockquote>
+                    <p class="tb-sub">Six students. One constraint: no screen, ever.</p>
+                    <div class="tb-divider"></div>
+                    <p class="tb-arabic">أبصرني &mdash; <em>Help me see.</em></p>
+                </div>
+
+                <div class="tb-scroll-hint" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </div>
+            </section>
+
+            <!-- ══ WHO WE ARE ════════════════════════════════════════ -->
+            <section class="about-split-section">
                 <div class="container">
-                    <div class="about-hero-content">
-                        <h1>The Abserny Story</h1>
-                        <p>We are a small group of passionate computer science students exploring the real-world impact of AI through hands-on development.</p>
+                    <div class="about-split">
+                        <div class="about-split-label">
+                            <span class="about-eyebrow">The Story</span>
+                            <h2>Built from a<br>single question</h2>
+                        </div>
+                        <div class="about-split-body">
+                            <p>Abserny began as a graduation project in late 2024 at the Faculty of Engineering. We chose accessibility because over 2.2 billion people worldwide live with visual impairment — and AI had reached a point where it could make a real, practical difference in their daily lives.</p>
+                            <p>The question that shaped every decision: <em>what if a blind user picked up this app for the very first time, alone?</em> Most assistive tools fail at that exact moment — they require sighted help to choose a language, read instructions, or navigate setup. We set out to eliminate that dependency completely.</p>
+                            <p>The result is Abserny v3.1 — a fully voice-first Android application in which no visual interaction is required at any point, from first launch through every day of use.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- How We Started -->
-            <section class="story-section">
+            <!-- ══ WHAT WE OFFER — 3 PILLARS ════════════════════════ -->
+            <section class="about-pillars-section">
                 <div class="container">
-                    <div class="story-grid">
-                        <div class="story-image">
-                            <img src="assets/images/fb.jpg" alt="Team brainstorming Abserny">
+                    <h2 class="section-title">What We Offer</h2>
+                    <div class="about-pillars">
+                        <div class="about-pillar">
+                            <div class="pillar-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M3 12s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z"/></svg>
+                            </div>
+                            <h3>Real-time Scene Description</h3>
+                            <p>Powered by Gemini 2.0 Flash Lite, Abserny describes your environment in natural language — hazards first, spatially aware, in Arabic or English, at 1,430 ms median latency.</p>
                         </div>
-                        <div class="story-content">
-                            <h2>How We Started</h2>
-                            <p>Abserny began as a graduation project in late 2024. Like many student teams, we wanted to build something meaningful — not just another academic exercise, but a tool that could genuinely help people.</p>
-                            <p>We chose accessibility because over 2.2 billion people worldwide live with visual impairment, and we believed AI could make a difference in their daily lives.</p>
-                            <p>What started as a simple idea quickly grew into a full-featured application combining computer vision, speech recognition, and natural language processing — all running offline for privacy and reliability.</p>
+                        <div class="about-pillar">
+                            <div class="pillar-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            </div>
+                            <h3>Works Offline, Always</h3>
+                            <p>When there's no internet, ML Kit steps in automatically. The app never fails silently — it routes to on-device detection and keeps speaking. No data connection required.</p>
+                        </div>
+                        <div class="about-pillar">
+                            <div class="pillar-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </div>
+                            <h3>Gesture-Only Control</h3>
+                            <p>Five gestures replace the entire UI. Double tap to scan. Long press to repeat. Triple tap for settings. Swipe to change mode. No screen interaction, no voice commands, no menus.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Our Vision -->
-            <section class="vision-section">
-                <div class="container">
-                    <h2>Our Vision</h2>
-                    <p>We believe technology should empower everyone, regardless of ability. Abserny is our first step toward creating AI tools that are truly inclusive, private, and practical for real-world use.</p>
-                    <p>As students exploring the AI world through this college project, we're learning how powerful — and responsible — this technology can be when designed with users in mind.</p>
-                </div>
-            </section>
-
-            <!-- Our Values -->
-            <section class="values-section">
+            <!-- ══ OUR VALUES ════════════════════════════════════════ -->
+            <section>
                 <div class="container">
                     <h2 class="section-title">Our Values</h2>
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <div class="value-icon">❤️</div>
-                            <h3>Empathy First</h3>
-                            <p>We design with real users in mind, prioritizing their needs and experiences above technical complexity.</p>
+                    <div class="editorial-list">
+                        <div class="editorial-item">
+                            <span class="editorial-num">01</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Accessibility First</span>
+                                <span class="editorial-desc">Every design decision is evaluated from the perspective of a user who cannot see the screen — including before the app has started and before a language has been chosen. Accessibility is the primary constraint, not a checklist item.</span>
+                            </div>
                         </div>
-                        <div class="value-card">
-                            <div class="value-icon">🔒</div>
-                            <h3>Privacy by Design</h3>
-                            <p>All processing happens locally on device — no data collection, no cloud dependency, complete user control.</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">02</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Voice Before Visual</span>
+                                <span class="editorial-desc">Audio is the primary interaction channel. The user controls everything through five gestures. No screen, no menus, no visual navigation — ever. If something requires looking, it doesn't belong in Abserny.</span>
+                            </div>
                         </div>
-                        <div class="value-card">
-                            <div class="value-icon">🎓</div>
-                            <h3>Learning Through Doing</h3>
-                            <p>As students, we're using this project to deeply understand AI systems while creating something meaningful.</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">03</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Reliable by Design</span>
+                                <span class="editorial-desc">A finite state machine governs every interaction, making race conditions structurally impossible. Offline detection ensures the app works without internet. Nothing depends on a premium device or a data connection.</span>
+                            </div>
                         </div>
-                        <!-- <div class="value-card"> -->
-                        <!--     <div class="value-icon">🌱</div> -->
-                        <!--     <h3>Open & Accessible</h3> -->
-                        <!--     <p>We share our code and knowledge freely, believing in open-source principles and inclusive technology.</p> -->
-                        <!-- </div> -->
                     </div>
                 </div>
             </section>
 
-            <!-- Meet the Team -->
+            <!-- ══ GESTURE VOCABULARY ════════════════════════════════ -->
+            <section>
+                <div class="container">
+                    <h2 class="section-title">Gesture Vocabulary</h2>
+                    <p class="section-intro">Five gestures cover every function. The vocabulary is intentionally small — a larger set would be harder to remember and more error-prone.</p>
+                    <div class="editorial-list">
+                        <div class="editorial-item">
+                            <span class="editorial-num">01</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Double Tap &mdash; Scan</span>
+                                <span class="editorial-desc">Triggers a scan and returns a spoken description. Full-screen target with a 320 ms recognition window prevents accidental activation from a single exploratory tap.</span>
+                            </div>
+                        </div>
+                        <div class="editorial-item">
+                            <span class="editorial-num">02</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Long Press &mdash; Repeat</span>
+                                <span class="editorial-desc">Repeats the last spoken result immediately. Isolated from taps by a 700 ms timer threshold — no confusion between the two actions.</span>
+                            </div>
+                        </div>
+                        <div class="editorial-item">
+                            <span class="editorial-num">03</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Triple Tap &mdash; Settings</span>
+                                <span class="editorial-desc">Opens the spoken Settings overlay — navigate by swipe, confirm by double tap, close by long press. Language change and tutorial replay, entirely without visual interaction.</span>
+                            </div>
+                        </div>
+                        <div class="editorial-item">
+                            <span class="editorial-num">04</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Swipe Right / Left &mdash; Change Mode</span>
+                                <span class="editorial-desc">Cycles through Scene, Object, Read, and People detection modes. A 60 px horizontal threshold with a 1.2:1 directional ratio prevents accidental switching during normal hand movement.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ THE TEAM ══════════════════════════════════════════ -->
             <section class="team-section">
                 <div class="container">
-                    <h2 class="section-title">Meet Our Team</h2>
-                    <p class="section-intro">A group of dedicated computer science students passionate about AI and accessibility</p>
-                    <div class="team-grid">
-                        <div class="team-member">
-                            <img src="assets/images/fb.jpg" alt="Saeed Hany" class="team-photo">
-                            <div class="team-info">
+                    <h2 class="section-title">Meet the Team</h2>
+                    <p class="section-intro">Six students from the Faculty of Engineering, Computer Science Department — Academic Year 2025–2026.</p>
+                    <div class="team-grid-new">
+                        <div class="team-card-new">
+                            <div class="tcn-photo"><img src="assets/images/fb.jpg" alt="Saeed Hany"></div>
+                            <div class="tcn-body">
                                 <h3>Saeed Hany</h3>
-                                <p class="role">Lead Developer & AI Engineer</p>
-                                <p>Specializes in computer vision and real-time systems</p>
+                                <span class="tcn-role">Lead Developer &amp; AI Engineer</span>
+                                <p>Architecture, gesture system, AI integration, and hooks design</p>
                             </div>
                         </div>
-                        <div class="team-member">
-                            <img src="assets/images/fb.jpg" alt="Mohamed Eid" class="team-photo">
-                            <div class="team-info">
+                        <div class="team-card-new">
+                            <div class="tcn-photo"><img src="assets/images/fb.jpg" alt="Mohamed Eid"></div>
+                            <div class="tcn-body">
                                 <h3>Mohamed Eid</h3>
-                                <p class="role">Speech Recognition Specialist</p>
-                                <p>Focuses on natural language processing and audio systems</p>
+                                <span class="tcn-role">Speech &amp; Language Systems</span>
+                                <p>TTS queue, bilingual support, Arabic prompt engineering</p>
                             </div>
                         </div>
-                        <div class="team-member">
-                            <img src="assets/images/fb.jpg" alt="Bassant Wael" class="team-photo">
-                            <div class="team-info">
+                        <div class="team-card-new">
+                            <div class="tcn-photo"><img src="assets/images/fb.jpg" alt="Bassant Wael"></div>
+                            <div class="tcn-body">
                                 <h3>Bassant Wael</h3>
-                                <p class="role">Research & Testing</p>
-                                <p>Coordinates user testing and accessibility validation</p>
+                                <span class="tcn-role">Research &amp; Testing</span>
+                                <p>User testing, gesture accuracy evaluation, accessibility validation</p>
                             </div>
                         </div>
-                        <div class="team-member">
-                            <img src="assets/images/fb.jpg" alt="Rashida Hassan" class="team-photo">
-                            <div class="team-info">
+                        <div class="team-card-new">
+                            <div class="tcn-photo"><img src="assets/images/fb.jpg" alt="Rashida Hassan"></div>
+                            <div class="tcn-body">
                                 <h3>Rashida Hassan</h3>
-                                <p class="role">Backend & Integration</p>
-                                <p>Handles system architecture and offline processing</p>
+                                <span class="tcn-role">Backend &amp; Offline Systems</span>
+                                <p>ML Kit integration, AbserneyVision training pipeline, offline routing</p>
                             </div>
                         </div>
-                        <div class="team-member">
-                            <img src="assets/images/fb.jpg" alt="Hana Hamed" class="team-photo">
-                            <div class="team-info">
+                        <div class="team-card-new">
+                            <div class="tcn-photo"><img src="assets/images/fb.jpg" alt="Hana Hamed"></div>
+                            <div class="tcn-body">
                                 <h3>Hana Hamed</h3>
-                                <p class="role">UI/UX & Accessibility</p>
-                                <p>Designs user interfaces with accessibility in mind</p>
+                                <span class="tcn-role">Onboarding &amp; UX</span>
+                                <p>Voice-first onboarding design, gesture tutorial, settings overlay</p>
                             </div>
                         </div>
-                        <div class="team-member">
-                            <img src="assets/images/fb.jpg" alt="Mariam Suroor" class="team-photo">
-                            <div class="team-info">
+                        <div class="team-card-new">
+                            <div class="tcn-photo"><img src="assets/images/fb.jpg" alt="Mariam Suroor"></div>
+                            <div class="tcn-body">
                                 <h3>Mariam Suroor</h3>
-                                <p class="role">Documentation & QA</p>
-                                <p>Ensures quality and maintains project documentation</p>
+                                <span class="tcn-role">Documentation &amp; QA</span>
+                                <p>Graduation book, latency benchmarks, quality evaluation</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Join Section -->
+            <!-- ══ CTA ═══════════════════════════════════════════════ -->
             <section class="vision-section">
                 <div class="container">
                     <h2>Join Our Journey</h2>
-                    <p>Abserny is an open graduation project. We're always happy to connect with fellow students, mentors, and anyone interested in accessible AI.</p>
+                    <p>Abserny is an open graduation project. We welcome feedback from accessibility researchers, developers, and anyone with lived experience of visual impairment.</p>
                     <a href="https://github.com/Abserny" class="btn-primary" target="_blank">Contribute on GitHub</a>
                 </div>
             </section>
+
         </main>
 
-        <!-- Footer -->
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-main">
                         <div class="footer-logo">
-                            <span class="logo-text">
-                                <img src="assets/images/absernyy.png" alt="Abserny Icon" width="120">
-                            </span>
-                            <p class="footer-tagline">Voice-activated object detection for the visually impaired</p>
+                            <img src="assets/images/absernyy.png" alt="Abserny Icon" width="120">
+                            <p class="footer-tagline">Voice-activated vision assistant for the visually impaired</p>
                         </div>
-                        <p class="footer-description">
-                            A graduation project exploring the potential of AI to create meaningful accessibility tools.
-                            Built with privacy, simplicity, and real-world impact in mind.
-                        </p>
+                        <p class="footer-description">A graduation project from the Faculty of Engineering, Computer Science Department. Built with accessibility-first principles.</p>
                     </div>
-
                     <div class="footer-links-grid">
                         <div class="footer-links-column">
                             <h4>Project</h4>
@@ -204,48 +269,38 @@
                             <ul>
                                 <li><a href="https://github.com/Abserny/Abserny" target="_blank">GitHub Repository</a></li>
                                 <li><a href="https://github.com/Abserny/issues" target="_blank">Report Issue</a></li>
-                                <li><a href="https://github.com/Abserny/releases" target="_blank">Releases</a></li>
+                                <li><a href="https://abserny.github.io/abserny.org/" target="_blank">Documentation</a></li>
                             </ul>
                         </div>
                         <div class="footer-links-column">
                             <h4>Contact</h4>
                             <ul>
-                                <li><a href="/cdn-cgi/l/email-protection#95f6fafbe1f4f6e1d5f4f7e6f0e7fbecbbf6faf8"><span class="__cf_email__" data-cfemail="f99a96978d989a8db9989b8a9c8b9780d79a9694">[email&#160;protected]</span></a></li>
+                                <li><a href="/cdn-cgi/l/email-protection#bbd8d4d5cfdad8cffbdad9c8dec9d5c295d8d4d6"><span class="__cf_email__" data-cfemail="7b1814150f1a180f3b1a19081e09150255181416">[email&#160;protected]</span></a></li>
                                 <li><a href="https://discord.gg/your-invite" target="_blank">Discord</a></li>
                                 <li><a href="https://twitter.com/abserny" target="_blank">@abserny</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <div class="footer-bottom">
                     <p class="copyright">
-                        © 2025 Abserny • Graduation Project • All rights reserved<br>
-                        <span class="credit">Built with care by students exploring AI for accessibility</span>
+                        &copy; 2025 Abserny &bull; Graduation Project &bull; All rights reserved<br>
+                        <span class="credit">Faculty of Engineering, Computer Science Department &bull; Academic Year 2025&ndash;2026</span>
                     </p>
                     <div class="social-links">
-                        <a href="https://github.com/Abserny" aria-label="GitHub">
-                            <span class="mdi--github"></span>
-                        </a>
-                        <a href="https://kaggle.com/abserny" aria-label="Kaggle">
-                            <span class="cib--kaggle"></span>
-                        </a>
-                        <a href="https://discord.gg/your-invite" aria-label="Discord">
-                            <span class="ic--baseline-discord"></span>
-                        </a>
-                        <a href="https://twitter.com/abserny" aria-label="Twitter">
-                            <span class="line-md--twitter-x"></span>
-                        </a>
+                        <a href="https://github.com/Abserny" aria-label="GitHub"><span class="mdi--github"></span></a>
+                        <a href="https://kaggle.com/abserny" aria-label="Kaggle"><span class="cib--kaggle"></span></a>
+                        <a href="https://discord.gg/your-invite" aria-label="Discord"><span class="ic--baseline-discord"></span></a>
+                        <a href="https://twitter.com/abserny" aria-label="Twitter"><span class="line-md--twitter-x"></span></a>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- Scripts -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
         <script src="main.js"></script>
-
         <script>
         const hamburger = document.getElementById('hamburger');
         const nav = document.getElementById('mainNav');
@@ -260,3 +315,5 @@
             });
         });
         </script>
+    </body>
+</html>

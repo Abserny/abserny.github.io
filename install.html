@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Abserny Mobile - Download</title>
-        <meta name="description" content="Download Abserny for iOS and Android. Voice-activated offline object detection for the visually impaired, now on mobile.">
+        <title>Abserny - Download for Android</title>
+        <meta name="description" content="Download Abserny v3.1 for Android. AI-powered voice-first vision assistant with gesture control, bilingual support, and offline fallback.">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +27,10 @@
                         <a href="index.html">Home</a>
                         <a href="releases.html">Releases</a>
                         <a href="about.html">About</a>
-                        <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
+                        <div class="nav-end-group">
+                            <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
+                        </div>
                     </nav>
                     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                         <span></span>
@@ -43,68 +45,106 @@
             <!-- Hero -->
             <section class="mobile-release-hero">
                 <div class="container">
-                    <span class="release-version">v1.0.0 — Now Available</span>
-                    <h1>Abserny Mobile</h1>
-                    <p>
-                        The full power of offline object detection and natural voice feedback,
-                        now in your pocket. Available for Android — iOS coming soon.
-                    </p>
+                    <span class="release-version">v3.1 &mdash; Android Available Now</span>
+                    <h1>Download Abserny</h1>
+                    <p>The complete voice-first vision assistant for Android. Gesture-driven, AI-powered, bilingual — works fully offline.</p>
 
-                    <div class="download-buttons">
-                        <a href="https://github.com/Abserny/Abserny/releases" class="download-btn btn-store" target="_blank">
-                            <span class="download-btn-icon">🤖</span>
-                            <span class="download-btn-text">
-                                <small>Get it on</small>
-                                <strong>Android / APK</strong>
-                            </span>
+                    <div class="qr-standalone">
+                        <div class="qr-frame">
+                            <img
+                                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&bgcolor=ffffff&color=0a0e1a&qzone=2&data=https://github.com/Abserny/Abserny/releases/latest"
+                                alt="QR code to download Abserny v3.1 APK"
+                                width="200" height="200"
+                                loading="lazy"
+                            >
+                        </div>
+                        <p class="qr-cta-label">Point your camera here to download</p>
+                        <a href="https://github.com/Abserny/Abserny/releases/latest" class="qr-link-alt" target="_blank">
+                            Or open this link on your device &#8599;
                         </a>
-                        <a href="https://github.com/Abserny/Abserny/releases" class="download-btn btn-apk" target="_blank">
-                            <span class="download-btn-icon">📦</span>
-                            <span class="download-btn-text">
-                                <small>Direct Download</small>
-                                <strong>Release APK</strong>
-                            </span>
-                        </a>
+                        <div class="qr-btn-row">
+                            <a href="https://github.com/Abserny/Abserny" class="btn-secondary" target="_blank">Source Code</a>
+                            <a href="releases.html" class="btn-ghost">All Versions &#8594;</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- What's New -->
+            <!-- What's Included -->
             <section>
                 <div class="container">
-                    <h2 class="section-title">What's in This Release</h2>
-                    <p class="section-intro">Everything from the desktop version, rebuilt for mobile with performance and accessibility at its core.</p>
+                    <h2 class="section-title">What&rsquo;s Included</h2>
+                    <p class="section-intro">Everything built into Abserny v3.1 — from the spoken onboarding to the offline AI fallback.</p>
 
-                    <div class="release-highlights">
-                        <div class="highlight-card">
-                            <span class="highlight-icon">⚡</span>
-                            <h3>Optimized Inference</h3>
-                            <p>Mobile-tuned YOLOv8 nano runs entirely on-device — no internet, no cloud, no delay.</p>
+                    <div class="editorial-list">
+                        <div class="editorial-item">
+                            <span class="editorial-num">01</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Voice-First Onboarding</span>
+                                <span class="editorial-desc">First launch speaks a language picker and interactive gesture tutorial. The user must perform each gesture to advance — zero sighted assistance required from the very first second.</span>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <span class="highlight-icon">🎙️</span>
-                            <h3>Voice Activation</h3>
-                            <p>Hands-free operation with offline Vosk speech recognition. Say "start" and Abserny responds.</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">02</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Gemini 2.0 AI Vision</span>
+                                <span class="editorial-desc">Google Gemini 2.0 Flash Lite delivers spatial scene descriptions with a 1,430 ms median latency. Hazards mentioned first, spatial direction words always included, preamble-free output.</span>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <span class="highlight-icon">📳</span>
-                            <h3>Haptic Feedback</h3>
-                            <p>Vibration patterns complement voice output for richer, more accessible environmental awareness.</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">03</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Offline ML Kit Fallback</span>
+                                <span class="editorial-desc">Automatic silent failover when offline. On-device image labeling and OCR via ML Kit — 380 ms median latency, 0% failure rate. No API key required for offline use.</span>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <span class="highlight-icon">🔋</span>
-                            <h3>Battery Efficient</h3>
-                            <p>Smart listening mode pauses processing when idle, preserving battery for all-day use.</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">04</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Four Detection Modes</span>
+                                <span class="editorial-desc">Scene, Object, Read, and People — swipe left or right to cycle. Each mode has its own tailored AI prompts, optimized per mode and per language for the highest-quality descriptions.</span>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <span class="highlight-icon">🔒</span>
-                            <h3>Fully Private</h3>
-                            <p>All processing is local. No data leaves your device — ever. No accounts, no tracking.</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">05</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Arabic &amp; English</span>
+                                <span class="editorial-desc">Full bilingual support: separate Gemini prompts, native TTS voices (ar-SA / en-US), RTL layout in Arabic mode. Language chosen during onboarding and changeable via Settings at any time.</span>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <span class="highlight-icon">🗣️</span>
-                            <h3>Natural Language Output</h3>
-                            <p>Hear clear, conversational descriptions like "I see a person on your left and a chair ahead."</p>
+                        <div class="editorial-item">
+                            <span class="editorial-num">06</span>
+                            <div class="editorial-body">
+                                <span class="editorial-title">Spoken Settings Menu</span>
+                                <span class="editorial-desc">Triple tap opens a fully spoken settings overlay — navigate by swipe, confirm by double tap, close by long press. Replay the tutorial or change language with no visual interaction whatsoever.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How to Install -->
+            <section>
+                <div class="container">
+                    <div class="requirements-section">
+                        <h2>Installation Steps</h2>
+                        <div class="req-grid">
+                            <div class="req-item">
+                                <h4>Step 1 &mdash; Download</h4>
+                                <p>Visit the GitHub Releases page and download the latest <code>.apk</code> file to your Android device.</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>Step 2 &mdash; Allow Installation</h4>
+                                <p>On Android, go to Settings &rarr; Security and enable "Install from unknown sources" for your browser or file manager.</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>Step 3 &mdash; Install the APK</h4>
+                                <p>Open the downloaded file and tap Install. Grant camera and microphone permissions when prompted.</p>
+                            </div>
+                            <div class="req-item">
+                                <h4>Step 4 &mdash; API Key (Optional)</h4>
+                                <p>For online Gemini AI, add your Google Gemini API key in <code>hooks/useDetection.js</code>. The app works fully offline without it via ML Kit.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -117,20 +157,20 @@
                         <h2>System Requirements</h2>
                         <div class="req-grid">
                             <div class="req-item">
-                                <h4>🤖 Android</h4>
-                                <p>Android 8.0 (Oreo) or higher<br>2 GB RAM minimum, 4 GB recommended<br>~300 MB storage for app + model</p>
+                                <h4>Android</h4>
+                                <p>Android 8.0 (Oreo) or higher. 2 GB RAM minimum, 4 GB recommended. Approximately 300 MB storage for app and model files.</p>
                             </div>
                             <div class="req-item">
-                                <h4>🍎 iOS</h4>
-                                <p>iOS 15 or higher<br>iPhone 8 or newer recommended<br>Coming soon — follow GitHub for updates</p>
+                                <h4>iOS</h4>
+                                <p>Architecturally compatible. Release pending Apple Developer Program enrollment. No code changes anticipated — follow GitHub for updates.</p>
                             </div>
                             <div class="req-item">
-                                <h4>📷 Camera</h4>
-                                <p>Rear camera required for object detection<br>Works best with 12 MP or higher</p>
+                                <h4>Camera</h4>
+                                <p>Rear camera required for detection. Works with standard Android rear cameras — no minimum megapixel requirement.</p>
                             </div>
                             <div class="req-item">
-                                <h4>🎤 Microphone</h4>
-                                <p>Required for voice activation<br>Works with built-in and external mics</p>
+                                <h4>Network</h4>
+                                <p>WiFi or mobile data for Gemini AI (online mode). No network required for ML Kit offline fallback — the app always works.</p>
                             </div>
                         </div>
                     </div>
@@ -145,38 +185,45 @@
                         <div class="status-info" style="margin-top: 0;">
                             <div class="status-timeline">
                                 <div class="status-item completed">
-                                    <span class="status-marker">✓</span>
+                                    <span class="status-marker">&#10003;</span>
                                     <div class="status-content">
-                                        <h4>Core Desktop Application</h4>
-                                        <p>Released December 2024 — v1.0.2</p>
+                                        <h4>Architecture &amp; Core Systems</h4>
+                                        <p>Hooks architecture, FSM, gesture engine, speech queue — complete</p>
                                     </div>
                                 </div>
                                 <div class="status-item completed">
-                                    <span class="status-marker">✓</span>
+                                    <span class="status-marker">&#10003;</span>
                                     <div class="status-content">
-                                        <h4>Mobile Development</h4>
-                                        <p>Optimized for Android and iOS — complete</p>
+                                        <h4>Voice-First Onboarding (v3)</h4>
+                                        <p>Language picker and interactive gesture tutorial — complete</p>
                                     </div>
                                 </div>
                                 <div class="status-item completed">
-                                    <span class="status-marker">✓</span>
+                                    <span class="status-marker">&#10003;</span>
                                     <div class="status-content">
-                                        <h4>Beta Testing</h4>
-                                        <p>Internal testing and accessibility validation — complete</p>
+                                        <h4>Bilingual Support &amp; AI Prompts</h4>
+                                        <p>Arabic/English prompts, TTS voices, RTL layout — complete</p>
                                     </div>
                                 </div>
                                 <div class="status-item active">
-                                    <span class="status-marker">✓</span>
+                                    <span class="status-marker">&#10003;</span>
                                     <div class="status-content">
-                                        <h4>Android Public Release</h4>
-                                        <p>Available now — download above</p>
+                                        <h4>Android Public Release &mdash; v3.1</h4>
+                                        <p>Available now on GitHub Releases</p>
                                     </div>
                                 </div>
                                 <div class="status-item">
-                                    <span class="status-marker">○</span>
+                                    <span class="status-marker">&#9675;</span>
                                     <div class="status-content">
-                                        <h4>iOS Public Release</h4>
-                                        <p>In progress — follow GitHub for updates</p>
+                                        <h4>AbserneyVision Model (80%+ accuracy)</h4>
+                                        <p>Dataset expansion in progress</p>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-marker">&#9675;</span>
+                                    <div class="status-content">
+                                        <h4>iOS Release</h4>
+                                        <p>Pending Apple Developer enrollment</p>
                                     </div>
                                 </div>
                             </div>
@@ -188,11 +235,11 @@
             <!-- CTA -->
             <section class="vision-section">
                 <div class="container">
-                    <h2>Stay Up to Date</h2>
-                    <p>Watch the repository for iOS release updates, bug fixes, and new model versions.</p>
+                    <h2>Stay Updated</h2>
+                    <p>Watch the repository for iOS updates, model improvements, and new version announcements.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
                         <a href="https://github.com/Abserny" class="btn-primary" target="_blank">Watch on GitHub</a>
-                        <a href="releases.html" class="btn-secondary">See All Releases</a>
+                        <a href="releases.html" class="btn-secondary">All Releases</a>
                     </div>
                 </div>
             </section>
@@ -207,11 +254,11 @@
                             <span class="logo-text">
                                 <img src="assets/images/absernyy.png" alt="Abserny Icon" width="120">
                             </span>
-                            <p class="footer-tagline">Voice-activated object detection for the visually impaired</p>
+                            <p class="footer-tagline">Voice-activated vision assistant for the visually impaired</p>
                         </div>
                         <p class="footer-description">
-                            A graduation project exploring the potential of AI to create meaningful accessibility tools.
-                            Built with privacy, simplicity, and real-world impact in mind.
+                            A graduation project from the Faculty of Engineering, Computer Science Department.
+                            Built with accessibility-first principles — every design decision evaluated from the perspective of a user who cannot see the screen.
                         </p>
                     </div>
 
@@ -235,7 +282,7 @@
                         <div class="footer-links-column">
                             <h4>Contact</h4>
                             <ul>
-                                <li><a href="mailto:contact@abserny.com">contact@abserny.com</a></li>
+                                <li><a href="/cdn-cgi/l/email-protection#9bf8f4f5effaf8efdbfaf9e8fee9f5e2b5f8f4f6"><span class="__cf_email__" data-cfemail="086b67667c696b7c48696a7b6d7a6671266b6765">[email&#160;protected]</span></a></li>
                                 <li><a href="https://discord.gg/your-invite" target="_blank">Discord</a></li>
                                 <li><a href="https://twitter.com/abserny" target="_blank">@abserny</a></li>
                             </ul>
@@ -245,29 +292,22 @@
 
                 <div class="footer-bottom">
                     <p class="copyright">
-                        © 2025 Abserny • Graduation Project • All rights reserved<br>
-                        <span class="credit">Built with care by students exploring AI for accessibility</span>
+                        &copy; 2025 Abserny &bull; Graduation Project &bull; All rights reserved<br>
+                        <span class="credit">Faculty of Engineering, Computer Science Department &bull; Academic Year 2025&ndash;2026</span>
                     </p>
                     <div class="social-links">
-                        <a href="https://github.com/Abserny" aria-label="GitHub">
-                            <span class="mdi--github"></span>
-                        </a>
-                        <a href="https://kaggle.com/abserny" aria-label="Kaggle">
-                            <span class="cib--kaggle"></span>
-                        </a>
-                        <a href="https://discord.gg/your-invite" aria-label="Discord">
-                            <span class="ic--baseline-discord"></span>
-                        </a>
-                        <a href="https://twitter.com/abserny" aria-label="Twitter">
-                            <span class="line-md--twitter-x"></span>
-                        </a>
+                        <a href="https://github.com/Abserny" aria-label="GitHub"><span class="mdi--github"></span></a>
+                        <a href="https://kaggle.com/abserny" aria-label="Kaggle"><span class="cib--kaggle"></span></a>
+                        <a href="https://discord.gg/your-invite" aria-label="Discord"><span class="ic--baseline-discord"></span></a>
+                        <a href="https://twitter.com/abserny" aria-label="Twitter"><span class="line-md--twitter-x"></span></a>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <script src="main.js"></script>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script>
+        // Hamburger
         const hamburger = document.getElementById('hamburger');
         const nav = document.getElementById('mainNav');
         hamburger.addEventListener('click', () => {
@@ -283,3 +323,4 @@
         </script>
     </body>
 </html>
+

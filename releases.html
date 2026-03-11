@@ -4,19 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Abserny - Releases</title>
-        <meta name="description" content="Download the latest versions of Abserny - core application, mobile app, and custom models.">
-
-        <!-- Fonts -->
+        <meta name="description" content="All official releases of Abserny — the voice-first vision assistant for the visually impaired.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/all.min.css">
     </head>
     <body>
-        <!-- Header -->
         <header>
             <div class="container-header">
                 <div class="header-content">
@@ -27,98 +22,233 @@
                         <a href="index.html">Home</a>
                         <a href="releases.html" class="active">Releases</a>
                         <a href="about.html">About</a>
-                        <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
+                        <div class="nav-end-group">
+                            <a href="https://abserny.github.io/abserny.org/" target="_blank">Docs <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Abserny" class="github" target="_blank">GitHub</a>
+                        </div>
                     </nav>
                     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span></span><span></span><span></span>
                     </button>
                 </div>
             </div>
         </header>
 
         <main>
-            <!-- Hero -->
             <section class="release-hero">
                 <div class="container">
                     <h1>Releases</h1>
-                    <p>All official versions of Abserny — core application, mobile app, speech models, and more.</p>
+                    <p>All official versions of Abserny — the Android app, the AbserneyVision model, and upcoming platforms.</p>
                 </div>
             </section>
 
-            <!-- Releases Grid -->
-            <section>
+            <!-- Abserny Mobile -->
+            <section class="releases-section">
                 <div class="container">
-                    <div class="releases-grid">
-                        <!-- Core Release -->
-                        <div class="release-card">
-                            <span class="release-badge badge-latest">Latest</span>
-                            <h3>Core Application v1.0.2</h3>
-                            <p class="release-date">December 25, 2024</p>
-                            <p>The complete desktop/web version with offline YOLO object detection, Vosk speech recognition, and natural language feedback.</p>
-                            <div class="release-links">
-                                <a href="https://github.com/Abserny/Abserny/releases/tag/v1.0.2" class="btn-primary" target="_blank">Download</a>
-                                <a href="https://github.com/Abserny/releases" class="btn-secondary" target="_blank">Changelog</a>
+                    <div class="releases-section-label">
+                        <span class="releases-section-tag">Android App</span>
+                        <h2>Abserny Mobile</h2>
+                    </div>
+
+                    <div class="accordion">
+
+                        <div class="ac-item ac-open">
+                            <button class="ac-trigger">
+                                <div class="ac-left">
+                                    <span class="ac-badge badge-latest">Latest</span>
+                                    <span class="ac-name">v3.1</span>
+                                    <span class="ac-sub">Full voice-first release &mdash; 2025&ndash;2026</span>
+                                </div>
+                                <svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="ac-body">
+                                <div class="ac-inner">
+                                    <p class="ac-desc">Complete voice-first Android application. Gemini 2.0 Flash Lite AI, gesture-driven onboarding, bilingual Arabic/English, four detection modes, and automatic offline ML Kit fallback.</p>
+                                    <ul class="ac-pills">
+                                        <li>Spoken onboarding</li>
+                                        <li>Gemini 2.0 Flash Lite</li>
+                                        <li>ML Kit offline fallback</li>
+                                        <li>Arabic &amp; English</li>
+                                        <li>4 detection modes</li>
+                                        <li>Spoken settings</li>
+                                    </ul>
+                                    <div class="ac-actions">
+                                        <a href="https://github.com/Abserny/Abserny/releases/latest" class="btn-primary" target="_blank">Download APK</a>
+                                        <a href="https://abserny.github.io/abserny.org/releases/v3-1" class="btn-secondary" target="_blank">Full Release Notes &#8599;</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Mobile App -->
-                        <div class="release-card">
-                            <span class="release-badge badge-development">In Development</span>
-                            <h3>Mobile App</h3>
-                            <p class="release-date">Expected Early 2026</p>
-                            <p>Native mobile experience with optimized performance, touch feedback, and battery-efficient listening. Currently in active development.</p>
-                            <div class="release-links">
-                                <a href="install.html" class="btn-secondary">Get Notified</a>
-                                <a href="https://docs.abserny.com" class="btn-secondary" target="_blank">Follow Progress</a>
+                        <div class="ac-item">
+                            <button class="ac-trigger">
+                                <div class="ac-left">
+                                    <span class="ac-badge badge-previous">Previous</span>
+                                    <span class="ac-name">v2.x</span>
+                                    <span class="ac-sub">Initial AI integration &mdash; Scene &amp; Object modes</span>
+                                </div>
+                                <svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="ac-body">
+                                <div class="ac-inner">
+                                    <p class="ac-desc">First Gemini AI integration. Two-mode gesture switching (Scene and Object), basic offline ML Kit fallback, English-only operation. Visual onboarding — replaced in v3.</p>
+                                    <ul class="ac-pills">
+                                        <li>Gemini AI (first integration)</li>
+                                        <li>Scene + Object modes</li>
+                                        <li>Basic ML Kit fallback</li>
+                                        <li>English only</li>
+                                    </ul>
+                                    <div class="ac-actions">
+                                        <a href="https://github.com/Abserny/Abserny/releases" class="btn-secondary" target="_blank">View on GitHub &#8599;</a>
+                                        <a href="https://abserny.github.io/abserny.org/releases/v2" class="btn-ghost" target="_blank">Release Notes &#8599;</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Speech Model -->
-                        <div class="release-card">
-                            <span class="release-badge badge-planned">Planned</span>
-                            <h3>Custom Speech Model</h3>
-                            <p class="release-date">2026</p>
-                            <p>Fine-tuned model optimized for accessibility commands and noisy environments. Will be released as a standalone downloadable model.</p>
-                            <div class="release-links">
-                                <a href="https://docs.abserny.com" class="btn-secondary" target="_blank">Track Updates</a>
+                        <div class="ac-item">
+                            <button class="ac-trigger">
+                                <div class="ac-left">
+                                    <span class="ac-badge badge-archive">Archive</span>
+                                    <span class="ac-name">v1.x</span>
+                                    <span class="ac-sub">Prototype &mdash; gesture system &amp; TTS foundation</span>
+                                </div>
+                                <svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="ac-body">
+                                <div class="ac-inner">
+                                    <p class="ac-desc">Initial prototype establishing the gesture input system, FSM architecture, and native TTS pipeline. No AI yet — rule-based detection. Proved the core interaction model.</p>
+                                    <ul class="ac-pills">
+                                        <li>Gesture + FSM architecture</li>
+                                        <li>Native TTS pipeline</li>
+                                        <li>Rule-based detection</li>
+                                    </ul>
+                                    <div class="ac-actions">
+                                        <a href="https://github.com/Abserny/Abserny/releases" class="btn-secondary" target="_blank">View on GitHub &#8599;</a>
+                                        <a href="https://abserny.github.io/abserny.org/releases/v1" class="btn-ghost" target="_blank">Release Notes &#8599;</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Future Features -->
-                        <div class="release-card">
-                            <span class="release-badge badge-planned">Planned</span>
-                            <h3>Future Releases</h3>
-                            <p class="release-date">2026+</p>
-                            <p>Directional audio cues, hazard detection, multi-language support, and integration modules for smart devices.</p>
-                            <div class="release-links">
-                                <a href="https://docs.abserny.com" class="btn-secondary" target="_blank">See Roadmap</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AbserneyVision -->
+            <section class="releases-section">
+                <div class="container">
+                    <div class="releases-section-label">
+                        <span class="releases-section-tag">Custom ML Model</span>
+                        <h2>AbserneyVision</h2>
+                    </div>
+
+                    <div class="accordion">
+
+                        <div class="ac-item">
+                            <button class="ac-trigger">
+                                <div class="ac-left">
+                                    <span class="ac-badge badge-training">In Training</span>
+                                    <span class="ac-name">v0.37</span>
+                                    <span class="ac-sub">MobileNetV2 &mdash; targeting 80%+ validation accuracy</span>
+                                </div>
+                                <svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="ac-body">
+                                <div class="ac-inner">
+                                    <p class="ac-desc">MobileNetV2 via transfer learning on ImageNet + COCO. Currently 37% validation accuracy across 13 indoor categories. Dataset expansion to 500+ images per class in progress.</p>
+                                    <ul class="ac-pills">
+                                        <li>MobileNetV2</li>
+                                        <li>13 indoor categories</li>
+                                        <li>37% accuracy (current)</li>
+                                        <li>80%+ target</li>
+                                    </ul>
+                                    <div class="ac-actions">
+                                        <a href="https://github.com/Abserny" class="btn-secondary" target="_blank">Track on GitHub &#8599;</a>
+                                        <a href="https://kaggle.com/abserny" class="btn-ghost" target="_blank">View on Kaggle &#8599;</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap -->
+            <section class="releases-section">
+                <div class="container">
+                    <div class="releases-section-label">
+                        <span class="releases-section-tag">Upcoming</span>
+                        <h2>iOS &amp; Roadmap</h2>
+                    </div>
+
+                    <div class="accordion">
+
+                        <div class="ac-item">
+                            <button class="ac-trigger">
+                                <div class="ac-left">
+                                    <span class="ac-badge badge-planned">Planned</span>
+                                    <span class="ac-name">iOS Release</span>
+                                    <span class="ac-sub">Pending Apple Developer enrollment</span>
+                                </div>
+                                <svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="ac-body">
+                                <div class="ac-inner">
+                                    <p class="ac-desc">Architecturally iOS-compatible — all Expo SDK 54 modules support iOS with no code changes anticipated. Blocked only by Apple Developer Program enrollment and EAS iOS build configuration.</p>
+                                    <ul class="ac-pills">
+                                        <li>Expo cross-platform ready</li>
+                                        <li>No code changes needed</li>
+                                        <li>Pending ADP enrollment</li>
+                                    </ul>
+                                    <div class="ac-actions">
+                                        <a href="https://github.com/Abserny" class="btn-ghost" target="_blank">Follow on GitHub &#8599;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ac-item">
+                            <button class="ac-trigger">
+                                <div class="ac-left">
+                                    <span class="ac-badge badge-planned">Future</span>
+                                    <span class="ac-name">Future Capabilities</span>
+                                    <span class="ac-sub">Post-graduation research roadmap</span>
+                                </div>
+                                <svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="ac-body">
+                                <div class="ac-inner">
+                                    <p class="ac-desc">Auto-scan with scene-change detection, on-device LLM integration (Gemma 2B / Phi-3 Mini) for fully offline AI, expanded AbserneyVision classes, and formal usability research with visually impaired participants.</p>
+                                    <ul class="ac-pills">
+                                        <li>Auto-scan mode</li>
+                                        <li>On-device LLM</li>
+                                        <li>Expanded model classes</li>
+                                        <li>Usability research</li>
+                                    </ul>
+                                    <div class="ac-actions">
+                                        <a href="https://abserny.github.io/abserny.org/roadmap" class="btn-ghost" target="_blank">Full Roadmap &#8599;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-main">
                         <div class="footer-logo">
-                            <span class="logo-text">
-                                <img src="assets/images/absernyy.png" alt="Abserny Icon" width="120">
-                            </span>
-                            <p class="footer-tagline">Voice-activated object detection for the visually impaired</p>
+                            <img src="assets/images/absernyy.png" alt="Abserny Icon" width="120">
+                            <p class="footer-tagline">Voice-activated vision assistant for the visually impaired</p>
                         </div>
-                        <p class="footer-description">
-                            A graduation project exploring the potential of AI to create meaningful accessibility tools.
-                            Built with privacy, simplicity, and real-world impact in mind.
-                        </p>
+                        <p class="footer-description">A graduation project from the Faculty of Engineering, Computer Science Department. Built with accessibility-first principles.</p>
                     </div>
-
                     <div class="footer-links-grid">
                         <div class="footer-links-column">
                             <h4>Project</h4>
@@ -133,51 +263,83 @@
                             <ul>
                                 <li><a href="https://github.com/Abserny/Abserny" target="_blank">GitHub Repository</a></li>
                                 <li><a href="https://github.com/Abserny/issues" target="_blank">Report Issue</a></li>
-                                <li><a href="https://docs.abserny.com" target="_blank">Documentation</a></li>
+                                <li><a href="https://abserny.github.io/abserny.org/" target="_blank">Documentation</a></li>
                             </ul>
                         </div>
                         <div class="footer-links-column">
                             <h4>Contact</h4>
                             <ul>
-                                <li><a href="/cdn-cgi/l/email-protection#a7c4c8c9d3c6c4d3e7c6c5d4c2d5c9de89c4c8ca"><span class="__cf_email__" data-cfemail="81e2eeeff5e0e2f5c1e0e3f2e4f3eff8afe2eeec">[email&#160;protected]</span></a></li>
+                                <li><a href="mailto:contact@abserny.com">contact@abserny.com</a></li>
                                 <li><a href="https://discord.gg/your-invite" target="_blank">Discord</a></li>
                                 <li><a href="https://twitter.com/abserny" target="_blank">@abserny</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <div class="footer-bottom">
                     <p class="copyright">
-                        © 2025 Abserny • Graduation Project • All rights reserved<br>
-                        <span class="credit">Built with care by students exploring AI for accessibility</span>
+                        &copy; 2025 Abserny &bull; Graduation Project &bull; All rights reserved<br>
+                        <span class="credit">Faculty of Engineering, Computer Science Department &bull; Academic Year 2025&ndash;2026</span>
                     </p>
                     <div class="social-links">
-                        <a href="https://github.com/Abserny" aria-label="GitHub">
-                            <span class="mdi--github"></span>
-                        </a>
-                        <a href="https://kaggle.com/abserny" aria-label="Kaggle">
-                            <span class="cib--kaggle"></span>
-                        </a>
-                        <a href="https://discord.gg/your-invite" aria-label="Discord">
-                            <span class="ic--baseline-discord"></span>
-                        </a>
-                        <a href="https://twitter.com/abserny" aria-label="Twitter">
-                            <span class="line-md--twitter-x"></span>
-                            <script src="main.js"></script>
-                            <script>
-                            const hamburger = document.getElementById('hamburger');
-                            const nav = document.getElementById('mainNav');
-                            hamburger.addEventListener('click', () => {
-                                hamburger.classList.toggle('open');
-                                nav.classList.toggle('open');
-                            });
-                            nav.querySelectorAll('a').forEach(link => {
-                                link.addEventListener('click', () => {
-                                    hamburger.classList.remove('open');
-                                    nav.classList.remove('open');
-                                });
-                            });
-                            </script>
+                        <a href="https://github.com/Abserny" aria-label="GitHub"><span class="mdi--github"></span></a>
+                        <a href="https://kaggle.com/abserny" aria-label="Kaggle"><span class="cib--kaggle"></span></a>
+                        <a href="https://discord.gg/your-invite" aria-label="Discord"><span class="ic--baseline-discord"></span></a>
+                        <a href="https://twitter.com/abserny" aria-label="Twitter"><span class="line-md--twitter-x"></span></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('mainNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                nav.classList.remove('open');
+            });
+        });
+
+        // Accordion — clean, no hidden attribute conflicts
+        document.querySelectorAll('.ac-item').forEach(item => {
+            const trigger = item.querySelector('.ac-trigger');
+            const body    = item.querySelector('.ac-body');
+
+            // Init open state
+            if (item.classList.contains('ac-open')) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+            } else {
+                body.style.maxHeight = '0';
+            }
+
+            trigger.addEventListener('click', () => {
+                const isOpen = item.classList.contains('ac-open');
+
+                // Close all in same accordion
+                const siblings = item.closest('.accordion').querySelectorAll('.ac-item');
+                siblings.forEach(sib => {
+                    if (sib !== item && sib.classList.contains('ac-open')) {
+                        sib.classList.remove('ac-open');
+                        sib.querySelector('.ac-body').style.maxHeight = '0';
+                    }
+                });
+
+                // Toggle this
+                if (isOpen) {
+                    item.classList.remove('ac-open');
+                    body.style.maxHeight = '0';
+                } else {
+                    item.classList.add('ac-open');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
+            });
+        });
+        </script>
     </body>
 </html>
