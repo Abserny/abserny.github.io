@@ -1,0 +1,350 @@
+.tb-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: var(--header-height);
+}
+
+/* The actual team photo layer */
+.tb-photo-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.tb-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.04);
+    filter: blur(0px);
+    transition: filter 1s ease;
+}
+
+/* Frosted blur layer */
+.tb-blur {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(14px) saturate(0.7);
+    -webkit-backdrop-filter: blur(14px) saturate(0.7);
+    background: rgba(10, 14, 26, 0.38);
+}
+
+/* Dark gradient, stronger at top (behind header) and bottom */
+.tb-gradient {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom,
+        rgba(10,14,26,0.85) 0%,
+        rgba(10,14,26,0.15) 35%,
+        rgba(10,14,26,0.15) 65%,
+        rgba(10,14,26,0.92) 100%
+        );
+}
+
+/* Content centered over the blur */
+.tb-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 780px;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    animation: tbFadeUp 1s ease both;
+}
+
+@keyframes tbFadeUp {
+from { opacity: 0; transform: translateY(24px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.tb-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    opacity: 0.9;
+}
+
+.tb-quote {
+    margin: 0;
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.35;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.tb-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.tb-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(96,165,250,0.4);
+}
+
+.tb-arabic {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.55);
+    margin: 0;
+    letter-spacing: 0.04em;
+}
+
+.tb-arabic em {
+    color: rgba(255,255,255,0.75);
+    font-style: normal;
+}
+
+/* Scroll hint arrow at bottom */
+.tb-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255,255,255,0.3);
+    animation: tbBounce 2s ease-in-out infinite;
+}
+
+@keyframes tbBounce {
+0%, 100% { transform: translateX(-50%) translateY(0); }
+50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ============================================================
+ABOUT, SPLIT STORY SECTION
+============================================================ */
+
+.about-split-section {
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.about-split {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.about-split-label {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+}
+
+.about-eyebrow {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 0.75rem;
+}
+
+.about-split-label h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-primary);
+}
+
+.about-split-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.about-split-body p:last-child { margin-bottom: 0; }
+
+.about-split-body em {
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+/* ============================================================
+ABOUT, WHAT WE OFFER  (3 pillars)
+============================================================ */
+
+.about-pillars-section {
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.about-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--card-border);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: var(--spacing-md);
+}
+
+.about-pillar {
+    background: var(--card-bg);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: background 0.25s ease;
+}
+
+.about-pillar:hover {
+    background: rgba(96,165,250,0.06);
+}
+
+.pillar-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--accent-blue-dim);
+    border: 1px solid rgba(96,165,250,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.about-pillar h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.about-pillar p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ============================================================
+ABOUT, TEAM GRID (new style)
+============================================================ */
+
+.team-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.team-grid-new {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--card-border);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: var(--spacing-md);
+}
+
+.team-card-new {
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    transition: background 0.25s ease;
+}
+
+.team-card-new:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+.tcn-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.tcn-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(30%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.team-card-new:hover .tcn-photo img {
+    filter: grayscale(0%);
+    transform: scale(1.04);
+}
+
+.tcn-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.tcn-body h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.tcn-role {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+}
+
+.tcn-body p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.25rem 0 0;
+}
+
+
+@media (max-width: 968px) {
+    .about-split {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .about-split-label {
+        position: static;
+    }
+
+    .about-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .tb-quote {
+        font-size: 1.35rem;
+    }
+
+    .team-grid-new {
+        grid-template-columns: 1fr;
+    }
+}

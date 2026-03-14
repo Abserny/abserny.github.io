@@ -1,0 +1,194 @@
+/* ============================================================
+QR STANDALONE, install.html
+============================================================ */
+
+.qr-standalone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.qr-frame {
+    width: 196px;
+    height: 196px;
+    padding: 10px;
+    background: #0f172a;
+    border: 1px solid rgba(96,165,250,0.25);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 6px rgba(96,165,250,0.05);
+}
+
+.qr-frame img {
+    display: block;
+    border-radius: 6px;
+}
+
+.qr-cta-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+.qr-link-alt {
+    font-size: 0.875rem;
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.qr-link-alt:hover { color: #93c5fd; text-decoration: underline; }
+
+.qr-btn-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+/* ============================================================
+RESPONSIVE
+============================================================ */
+
+@media (max-width: 768px) {
+    .editorial-item {
+        grid-template-columns: 52px 1fr;
+        gap: var(--spacing-sm);
+    }
+    .editorial-num { font-size: 2rem; }
+
+    .def-row { grid-template-columns: 1fr; gap: 0.4rem; }
+
+    .mode-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.5rem var(--spacing-sm);
+    }
+
+    .ac-sub { display: none; }
+}
+
+/* ============================================================
+QR FRAME FIX, plain, no glow
+============================================================ */
+
+.qr-frame {
+    width: 220px;
+    height: 220px;
+    padding: 12px;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.qr-frame img {
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+}
+
+/* ── Ticker mobile fix ───────────────────────────────────────── */
+@media (max-width: 640px) {
+    .ticker-item {
+        font-size: 0.65rem;
+        padding: 0 0.9rem;
+    }
+
+    .ticker-cta {
+        padding: 0 1rem;
+        font-size: 0.68rem;
+    }
+
+    /* On very small screens make hero content fit without overflow */
+    .hero > .container {
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .hero-content {
+        gap: 1rem;
+    }
+}
+
+/* ============================================================
+   RELEASE TIMELINE / STATUS
+   ============================================================ */
+
+.status-timeline {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.status-item {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border-left: 2px solid var(--card-border);
+    margin-left: 1rem;
+    position: relative;
+    opacity: 0.5;
+}
+
+.status-item.completed,
+.status-item.active {
+    opacity: 1;
+}
+
+.status-item.completed { border-left-color: var(--accent-green); }
+.status-item.active    { border-left-color: var(--accent-blue); }
+
+.status-marker {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 50%;
+    position: absolute;
+    left: -16px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.status-item.completed .status-marker {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+    color: var(--bg-dark);
+}
+
+.status-item.active .status-marker {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: var(--bg-dark);
+    animation: pulse 2s infinite;
+}
+
+.status-content {
+    flex: 1;
+    padding-left: var(--spacing-md);
+}
+
+.status-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.status-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}

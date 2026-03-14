@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Abserny - Voice-Activated Vision Assistant for the Visually Impaired</title>
-        <meta name="description" content="Abserny is an AI-powered mobile app that helps visually impaired users understand their surroundings through gesture-driven, fully spoken interaction — no screen required.">
+        <meta name="description" content="Abserny is an AI-powered mobile app that helps visually impaired users understand their surroundings through gesture-driven, fully spoken interaction, no screen required.">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
             <div class="announce-scroll-wrap">
                 <div class="announce-track">
                     <span class="announce-new">NEW</span>
-                    <span class="announce-text">Abserny v3.1 is out &mdash; AI vision for Android, now available</span>
+                    <span class="announce-text">Abserny v1.0 is out , AI vision for Android, now available</span>
                     <span class="announce-sep">·</span>
                     <span class="announce-text">Gemini 2.0 Flash Lite</span>
                     <span class="announce-sep">·</span>
@@ -36,7 +36,7 @@
                     <span class="announce-sep">·</span>
                     <!-- duplicate for loop -->
                     <span class="announce-new">NEW</span>
-                    <span class="announce-text">Abserny v3.1 is out &mdash; AI vision for Android, now available</span>
+                    <span class="announce-text">Abserny v1.0 is out , AI vision for Android, now available</span>
                     <span class="announce-sep">·</span>
                     <span class="announce-text">Gemini 2.0 Flash Lite</span>
                     <span class="announce-sep">·</span>
@@ -86,7 +86,7 @@
                     <div class="hero-content">
                         <div class="hero-text">
                             <h1>Abserny</h1>
-                            <p class="subtitle">Voice-activated vision assistant for the visually impaired. No screen required — ever.</p>
+                            <p class="subtitle">Voice-activated vision assistant for the visually impaired. No screen required, ever.</p>
                             <a href="#about" class="cta-button" aria-label="Learn more about Abserny">
                                 <span>Discover how it works</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -94,24 +94,34 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="hero-visual" aria-label="Visual representation of Abserny detection states">
-                            <div class="scene-overlay">
-                                <div class="detection-box box1">
-                                    <span class="detection-label">Person</span>
+                        <div class="hero-visual" aria-label="Abserny live scene simulation">
+                            <!-- Camera POV simulation -->
+                            <div class="hv-camera-ui">
+                                <!-- Top bar: mode + status -->
+                                <div class="hv-topbar">
+                                    <div class="hv-mode-badge" id="hvModeBadge">Scene</div>
+                                    <div class="hv-status">
+                                        <span class="hv-status-dot"></span>
+                                        <span class="hv-status-text" id="hvStatusText">READY</span>
+                                    </div>
                                 </div>
-                                <div class="detection-box box2">
-                                    <span class="detection-label">Steps</span>
+
+                                <!-- Detection layer -->
+                                <div class="hv-scene" id="hvScene"></div>
+
+                                <!-- Bottom: spoken output -->
+                                <div class="hv-output" id="hvOutput">
+                                    <div class="hv-wave">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <p class="hv-desc" id="hvDesc"></p>
                                 </div>
-                                <div class="detection-box box3">
-                                    <span class="detection-label">Door</span>
-                                </div>
-                                <div class="audio-wave" aria-label="Audio feedback indicator">
-                                    <div class="wave-bar"></div>
-                                    <div class="wave-bar"></div>
-                                    <div class="wave-bar"></div>
-                                    <div class="wave-bar"></div>
-                                    <div class="wave-bar"></div>
-                                </div>
+
+                                <!-- Corner brackets -->
+                                <div class="hv-bracket hv-bracket--tl"></div>
+                                <div class="hv-bracket hv-bracket--tr"></div>
+                                <div class="hv-bracket hv-bracket--bl"></div>
+                                <div class="hv-bracket hv-bracket--br"></div>
                             </div>
                         </div>
                     </div>
@@ -125,19 +135,19 @@
                 <div class="container">
                     <h2 class="section-title">Understanding Through AI</h2>
                     <p class="section-intro">
-                        A graduation project that gives visually impaired individuals a fully spoken, gesture-driven window into the world around them — powered by Gemini AI, working even offline.
+                        A graduation project that gives visually impaired individuals a fully spoken, gesture-driven window into the world around them, powered by Gemini AI, working even offline.
                     </p>
                     <div class="about-grid">
                         <div class="about-card">
                             <h3>The Problem</h3>
                             <p>
-                                Over 2.2 billion people worldwide live with visual impairment. Most AI assistive tools still assume a sighted user — requiring menus, icons, and screens to set up. Even the first launch demands someone who can see.
+                                Over 2.2 billion people worldwide live with visual impairment. Most AI assistive tools still assume a sighted user, requiring menus, icons, and screens to set up. Even the first launch demands someone who can see.
                             </p>
                         </div>
                         <div class="about-card">
                             <h3>Our Answer</h3>
                             <p>
-                                Abserny is built entirely around a voice-first philosophy. Every interaction — from first launch and language selection to daily use — is driven by simple gestures and spoken feedback. No screen. No visual menus. No sighted assistance needed.
+                                Abserny is built entirely around a voice-first philosophy. Every interaction, from first launch and language selection to daily use, is driven by simple gestures and spoken feedback. No screen. No visual menus. No sighted assistance needed.
                             </p>
                         </div>
                     </div>
@@ -147,17 +157,76 @@
             <!-- Process Flow -->
             <section id="process">
                 <div class="container">
-                    <h2 class="section-title">Abserny Process Flow</h2>
-                    <div class="process-container" id="processSection">
-                        <div class="process-flow" id="flowSteps"></div>
-                        <div class="scene-area">
-                            <div class="scene-header">
-                                <div class="scene-status">
-                                    <div class="status-dot"></div>
-                                    <span id="statusText">System Ready</span>
+                    <h2 class="section-title">How Abserny Works</h2>
+                    <p class="section-intro">A deterministic finite state machine governs every interaction, no race conditions, no ambiguity.</p>
+
+                    <div class="fsm-wrap" id="processSection">
+
+                        <!-- Phone mockup, the visual stage -->
+                        <div class="fsm-phone" id="fsmPhone">
+                            <div class="fsm-phone-shell">
+                                <div class="fsm-notch"></div>
+                                <div class="fsm-screen" id="fsmScreen">
+                                    <!-- filled by JS -->
+                                </div>
+                                <!-- gesture hint overlay -->
+                                <div class="fsm-gesture-hint" id="fsmGestureHint"></div>
+                            </div>
+                        </div>
+
+                        <!-- Right: state list + info panel -->
+                        <div class="fsm-right">
+
+                            <!-- State nodes -->
+                            <div class="fsm-states" id="fsmStates">
+                                <div class="fsm-state" data-state="BOOT">
+                                    <div class="fsm-state-dot"></div>
+                                    <div class="fsm-state-body">
+                                        <span class="fsm-state-name">BOOT</span>
+                                        <span class="fsm-state-desc">Initialize camera, TTS engine &amp; FSM supervisor</span>
+                                    </div>
+                                </div>
+                                <div class="fsm-connector"></div>
+                                <div class="fsm-state" data-state="READY">
+                                    <div class="fsm-state-dot"></div>
+                                    <div class="fsm-state-body">
+                                        <span class="fsm-state-name">READY</span>
+                                        <span class="fsm-state-desc">Idle, awaiting double tap gesture</span>
+                                    </div>
+                                </div>
+                                <div class="fsm-connector"></div>
+                                <div class="fsm-state" data-state="SCANNING">
+                                    <div class="fsm-state-dot"></div>
+                                    <div class="fsm-state-body">
+                                        <span class="fsm-state-name">SCANNING</span>
+                                        <span class="fsm-state-desc">Capture frame → route to Gemini or ML Kit</span>
+                                    </div>
+                                </div>
+                                <div class="fsm-connector"></div>
+                                <div class="fsm-state" data-state="SPEAKING">
+                                    <div class="fsm-state-dot"></div>
+                                    <div class="fsm-state-body">
+                                        <span class="fsm-state-name">SPEAKING</span>
+                                        <span class="fsm-state-desc">TTS speaks description, long press to repeat</span>
+                                    </div>
+                                </div>
+                                <div class="fsm-connector fsm-connector--return"></div>
+                                <div class="fsm-state fsm-state--error" data-state="ERROR">
+                                    <div class="fsm-state-dot"></div>
+                                    <div class="fsm-state-body">
+                                        <span class="fsm-state-name">ERROR</span>
+                                        <span class="fsm-state-desc">API failure → auto-recover to READY</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="scene-stage" id="sceneStage"></div>
+
+                            <!-- Info panel, updates per state -->
+                            <div class="fsm-info-panel" id="fsmInfoPanel">
+                                <div class="fsm-info-badge" id="fsmInfoBadge">BOOT</div>
+                                <p class="fsm-info-text" id="fsmInfoText">Starting up…</p>
+                                <div class="fsm-info-meta" id="fsmInfoMeta"></div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -172,14 +241,14 @@
                             <span class="editorial-num">01</span>
                             <div class="editorial-body">
                                 <span class="editorial-title">Gesture-Driven Control</span>
-                                <span class="editorial-desc">Five gestures cover every function — double tap to scan, long press to repeat the last result, swipe to change mode, triple tap for settings. No buttons, no visual interface, ever.</span>
+                                <span class="editorial-desc">Five gestures cover every function, double tap to scan, long press to repeat the last result, swipe to change mode, triple tap for settings. No buttons, no visual interface, ever.</span>
                             </div>
                         </div>
                         <div class="editorial-item">
                             <span class="editorial-num">02</span>
                             <div class="editorial-body">
                                 <span class="editorial-title">Gemini AI Vision</span>
-                                <span class="editorial-desc">Google Gemini 2.0 Flash Lite analyzes the camera feed and produces spatial spoken descriptions — hazards first, in your language, with a 1,430 ms median latency.</span>
+                                <span class="editorial-desc">Google Gemini 2.0 Flash Lite analyzes the camera feed and produces spatial spoken descriptions, hazards first, in your language, with a 1,430 ms median latency.</span>
                             </div>
                         </div>
                         <div class="editorial-item">
@@ -193,21 +262,21 @@
                             <span class="editorial-num">04</span>
                             <div class="editorial-body">
                                 <span class="editorial-title">Full Offline Support</span>
-                                <span class="editorial-desc">Automatic silent failover to on-device ML Kit when offline — 380 ms median latency, 0% failure rate. AbserneyVision, our custom MobileNetV2 model, adds a further offline detection layer.</span>
+                                <span class="editorial-desc">Automatic silent failover to on-device ML Kit when offline, 380 ms median latency, 0% failure rate. AbserneyVision, our custom MobileNetV2 model, adds a further offline detection layer.</span>
                             </div>
                         </div>
                         <div class="editorial-item">
                             <span class="editorial-num">05</span>
                             <div class="editorial-body">
-                                <span class="editorial-title">Bilingual — Arabic &amp; English</span>
-                                <span class="editorial-desc">Complete Arabic (ar-SA) and English (en-US) support at every layer: TTS voices, per-language AI prompts, UI text, and RTL layout. Language chosen during spoken onboarding — no reading required.</span>
+                                <span class="editorial-title">Bilingual, Arabic &amp; English</span>
+                                <span class="editorial-desc">Complete Arabic (ar-SA) and English (en-US) support at every layer: TTS voices, per-language AI prompts, UI text, and RTL layout. Language chosen during spoken onboarding, no reading required.</span>
                             </div>
                         </div>
                         <div class="editorial-item">
                             <span class="editorial-num">06</span>
                             <div class="editorial-body">
                                 <span class="editorial-title">Voice-First Onboarding</span>
-                                <span class="editorial-desc">First launch speaks a language picker then walks through each gesture interactively — the user must perform each gesture to advance. Zero sighted assistance required from the very first second.</span>
+                                <span class="editorial-desc">First launch speaks a language picker then walks through each gesture interactively, the user must perform each gesture to advance. Zero sighted assistance required from the very first second.</span>
                             </div>
                         </div>
                     </div>
@@ -225,28 +294,28 @@
                                 <span class="mode-name">Scene</span>
                                 <span class="mode-trigger">"Double tap to describe your surroundings"</span>
                             </div>
-                            <p class="mode-desc">Broad environmental awareness. Hazards and obstacles are mentioned first, followed by spatial context — up to four items per description, always with directional words like ahead, to your left, nearby.</p>
+                            <p class="mode-desc">Broad environmental awareness. Hazards and obstacles are mentioned first, followed by spatial context, up to four items per description, always with directional words like ahead, to your left, nearby.</p>
                         </div>
                         <div class="mode-row mode-object">
                             <div class="mode-label-group">
                                 <span class="mode-name">Object</span>
                                 <span class="mode-trigger">"Hold close and double tap"</span>
                             </div>
-                            <p class="mode-desc">Close-range object identification. Returns the precise name plus one functional detail — ideal for identifying items on a table, in a bag, or on a shelf.</p>
+                            <p class="mode-desc">Close-range object identification. Returns the precise name plus one functional detail, ideal for identifying items on a table, in a bag, or on a shelf.</p>
                         </div>
                         <div class="mode-row mode-read">
                             <div class="mode-label-group">
                                 <span class="mode-name">Read</span>
                                 <span class="mode-trigger">"Point at text and double tap"</span>
                             </div>
-                            <p class="mode-desc">Full text recognition via on-device OCR. Reads all visible text verbatim, top to bottom — for signs, labels, documents, packaging, and displays.</p>
+                            <p class="mode-desc">Full text recognition via on-device OCR. Reads all visible text verbatim, top to bottom, for signs, labels, documents, packaging, and displays.</p>
                         </div>
                         <div class="mode-row mode-people">
                             <div class="mode-label-group">
                                 <span class="mode-name">People</span>
                                 <span class="mode-trigger">"Double tap to detect people"</span>
                             </div>
-                            <p class="mode-desc">Social and navigation awareness. Reports the count of people in frame, their spatial location, and observable activity — for navigating crowds, entering rooms, or approaching conversations.</p>
+                            <p class="mode-desc">Social and navigation awareness. Reports the count of people in frame, their spatial location, and observable activity, for navigating crowds, entering rooms, or approaching conversations.</p>
                         </div>
                     </div>
                 </div>
@@ -259,27 +328,27 @@
                     <div class="def-list">
                         <div class="def-row">
                             <span class="def-term">React Native / Expo SDK 54</span>
-                            <span class="def-desc">Cross-platform mobile framework with a hooks-based architecture — speech, gesture, detection, and language each live in their own independent, swappable hook.</span>
+                            <span class="def-desc">Cross-platform mobile framework with a hooks-based architecture, speech, gesture, detection, and language each live in their own independent, swappable hook.</span>
                         </div>
                         <div class="def-row">
                             <span class="def-term">Google Gemini 2.0 Flash Lite</span>
-                            <span class="def-desc">Lowest-latency capable vision-language model. Natively multimodal — analyzes images and generates spatial natural-language descriptions in Arabic and English. Free tier, no cost barrier.</span>
+                            <span class="def-desc">Lowest-latency capable vision-language model. Natively multimodal, analyzes images and generates spatial natural-language descriptions in Arabic and English. Free tier, no cost barrier.</span>
                         </div>
                         <div class="def-row">
                             <span class="def-term">ML Kit (Google)</span>
-                            <span class="def-desc">On-device image labeling and text recognition. Fully offline — no network, no API key required. Activates automatically and silently when Gemini is unavailable.</span>
+                            <span class="def-desc">On-device image labeling and text recognition. Fully offline, no network, no API key required. Activates automatically and silently when Gemini is unavailable.</span>
                         </div>
                         <div class="def-row">
                             <span class="def-term">AbserneyVision</span>
-                            <span class="def-desc">Custom MobileNetV2 model trained via transfer learning on ImageNet and COCO — offline detection layer targeting 13 indoor categories. Currently 37% validation accuracy, expanding dataset toward 80%+.</span>
+                            <span class="def-desc">Custom MobileNetV2 model trained via transfer learning on ImageNet and COCO, offline detection layer targeting 13 indoor categories. Currently 37% validation accuracy, expanding dataset toward 80%+.</span>
                         </div>
                         <div class="def-row">
                             <span class="def-term">expo-speech (Native TTS)</span>
-                            <span class="def-desc">Interfaces with the Android native TTS engine. Custom speech queue with priority interruption — a new scan immediately replaces ongoing speech without any perceptible delay.</span>
+                            <span class="def-desc">Interfaces with the Android native TTS engine. Custom speech queue with priority interruption, a new scan immediately replaces ongoing speech without any perceptible delay.</span>
                         </div>
                         <div class="def-row">
                             <span class="def-term">PanResponder + FSM</span>
-                            <span class="def-desc">Full-screen gesture detection governed by a deterministic finite state machine — making it structurally impossible for two scans to run simultaneously or for gestures to conflict.</span>
+                            <span class="def-desc">Full-screen gesture detection governed by a deterministic finite state machine, making it structurally impossible for two scans to run simultaneously or for gestures to conflict.</span>
                         </div>
                     </div>
                 </div>
@@ -293,7 +362,7 @@
                     <div class="about-grid">
                         <div class="about-card">
                             <h3>1,430 ms</h3>
-                            <p>Median end-to-end latency from gesture to first spoken word — online via Gemini. Offline via ML Kit achieves 380 ms median.</p>
+                            <p>Median end-to-end latency from gesture to first spoken word, online via Gemini. Offline via ML Kit achieves 380 ms median.</p>
                         </div>
                         <div class="about-card">
                             <h3>87% Spatial Rate</h3>
@@ -307,7 +376,7 @@
             <section class="vision-section">
                 <div class="container">
                     <h2>Get Abserny on Android</h2>
-                    <p>Real-time, AI-powered scene description with gesture-driven control — available now for Android, iOS in progress.</p>
+                    <p>Real-time, AI-powered scene description with gesture-driven control, available now for Android, iOS in progress.</p>
                     <a href="install.html" class="btn-primary">Download Now</a>
                 </div>
             </section>
@@ -326,7 +395,7 @@
                         </div>
                         <p class="footer-description">
                             A graduation project from the Faculty of Engineering, Computer Science Department.
-                            Built with accessibility-first principles — every design decision evaluated from the perspective of a user who cannot see the screen.
+                            Built with accessibility-first principles, every design decision evaluated from the perspective of a user who cannot see the screen.
                         </p>
                     </div>
 
@@ -382,9 +451,7 @@
         </footer>
 
         <!-- Scripts -->
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-        <script src="main.js"></script>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
 
         <script>
         // Hamburger
