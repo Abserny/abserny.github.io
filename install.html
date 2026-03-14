@@ -59,11 +59,11 @@
                             >
                         </div>
                         <p class="qr-cta-label">Point your camera here to download</p>
-                        <a href="https://github.com/Abserny/Abserny/releases/latest" class="qr-link-alt" target="_blank">
+                        <a href="https://github.com/Abserny/Abserny-Mobile/releases/download/v1.0/abserny-v1.0.apk" class="qr-link-alt" target="_blank">
                             Or open this link on your device &#8599;
                         </a>
                         <div class="qr-btn-row">
-                            <a href="https://github.com/Abserny/Abserny" class="btn-secondary" target="_blank">Source Code</a>
+                            <a href="https://github.com/Abserny/Abserny-Mobile" class="btn-secondary" target="_blank">Source Code</a>
                             <a href="releases.html" class="btn-ghost">All Versions &#8594;</a>
                         </div>
                     </div>
@@ -321,8 +321,8 @@
                         <div class="footer-links-column">
                             <h4>Resources</h4>
                             <ul>
-                                <li><a href="https://github.com/Abserny/Abserny" target="_blank">GitHub Repository</a></li>
-                                <li><a href="https://github.com/Abserny/issues" target="_blank">Report Issue</a></li>
+                                <li><a href="https://github.com/Abserny/Abserny-Mobile" target="_blank">GitHub Repository</a></li>
+                                <li><a href="https://github.com/Abserny/Abserny-Mobile/issues" target="_blank">Report Issue</a></li>
                                 <li><a href="https://docs.abserny.com" target="_blank">Documentation</a></li>
                             </ul>
                         </div>
@@ -367,37 +367,47 @@
             });
         });
 
-        // ── Download Counter via GitHub Releases API ──────────────────
+        // ── Download Counter — CounterAPI V1 (free, no auth needed) ─────
+        // Namespace: abserny-app  |  Counter name: apk-downloads
+        // GET  https://api.counterapi.dev/v1/abserny-app/apk-downloads       → read
+        // GET  https://api.counterapi.dev/v1/abserny-app/apk-downloads/up    → increment
+        // Response shape: { "count": 42, ... }
+
+        const elCount = document.getElementById('dlCountInner');
+        const elSub   = document.getElementById('dlCountSub');
+
+        // Direct APK download URL — the one GitHub counts as an asset download
+        const APK_URL = 'https://github.com/Abserny/Abserny-Mobile/releases/download/v1.0/abserny-v1.0.apk';
+
+        function animateCount(target) {
+            if (target === 0) { elCount.textContent = '0'; return; }
+            const duration = 1400;
+            const t0 = performance.now();
+            const tick = now => {
+                const p    = Math.min((now - t0) / duration, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                elCount.textContent = Math.floor(ease * target).toLocaleString();
+                if (p < 1) requestAnimationFrame(tick);
+                    else elCount.textContent = target.toLocaleString();
+            };
+            requestAnimationFrame(tick);
+        }
+
+        // Fetch download count from GitHub Releases API (counts asset file clicks)
         (async () => {
-            const el    = document.getElementById('dlCountInner');
-            const sub   = document.getElementById('dlCountSub');
-            const OWNER = 'Abserny';
-            const REPO  = 'Abserny';
             try {
-                const res = await fetch(
-                    `https://api.github.com/repos/${OWNER}/${REPO}/releases`,
-                    { headers: { Accept: 'application/vnd.github+json' } }
-                );
+                const res      = await fetch('https://api.github.com/repos/Abserny/Abserny-Mobile/releases');
                 if (!res.ok) throw new Error();
                 const releases = await res.json();
                 let total = 0;
                 releases.forEach(r => r.assets.forEach(a => { total += a.download_count; }));
-
-                // Count-up animation
-                const duration = 1600;
-                const start = performance.now();
-                const tick = (now) => {
-                    const p = Math.min((now - start) / duration, 1);
-                    const ease = 1 - Math.pow(1 - p, 3);
-                    el.textContent = Math.floor(ease * total).toLocaleString();
-                    if (p < 1) requestAnimationFrame(tick);
-                    else el.textContent = total.toLocaleString();
-                };
-                requestAnimationFrame(tick);
-                sub.textContent = `${releases.length} release${releases.length !== 1 ? 's' : ''} · GitHub`;
+                animateCount(total);
+                elSub.textContent = total === 0
+                    ? 'be the first to download'
+                    : `across ${releases.length} release${releases.length !== 1 ? 's' : ''}`;
             } catch {
-                el.textContent = '—';
-                sub.textContent = 'unavailable';
+                elCount.textContent = '—';
+                elSub.textContent   = 'unavailable';
             }
         })();
         </script>

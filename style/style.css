@@ -1455,7 +1455,7 @@ to   { opacity: 1; transform: translateY(0); }
 
 /* === Mobile App Release Page === */
 .mobile-release-hero {
-    margin-top: -60px;
+    margin-top: -55px;
     padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);
     text-align: center;
 }
@@ -1655,6 +1655,9 @@ to   { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 640px) {
+    .mobile-release-hero {
+        margin-top: 20px;
+    }
     .req-grid {
         grid-template-columns: 1fr;
     }
