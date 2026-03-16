@@ -133,8 +133,8 @@ section {
 
 /* === Mobile App Release Page === */
 .mobile-release-hero {
-    margin-top: -55px;
-    padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);
+    margin-top: 0;
+    padding: calc(var(--header-height) + var(--spacing-lg)) 0 var(--spacing-lg);
     text-align: center;
 }
 
@@ -334,7 +334,8 @@ section {
 
 @media (max-width: 640px) {
     .mobile-release-hero {
-        margin-top: 20px;
+        margin-top: 0;
+        padding-top: calc(var(--header-height) + var(--spacing-md));
     }
     .req-grid {
         grid-template-columns: 1fr;
@@ -883,8 +884,8 @@ ACCORDION (new clean implementation)
 }
 
 /* ============================================================
-VISION SECTION — CTA sections used across all pages
-============================================================ */
+   VISION SECTION — CTA sections used across all pages
+   ============================================================ */
 
 .vision-section {
     background: linear-gradient(to bottom, var(--bg-navy), var(--bg-dark));
@@ -905,8 +906,8 @@ VISION SECTION — CTA sections used across all pages
 }
 
 /* ============================================================
-RELEASE HERO — page header for releases page
-============================================================ */
+   RELEASE HERO — page header for releases page
+   ============================================================ */
 
 .release-hero {
     padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);
