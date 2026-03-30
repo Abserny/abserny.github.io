@@ -1,4 +1,4 @@
-/* === Header === */
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -93,7 +93,7 @@ nav a i {
     font-size: 12px;
 }
 
-/* === Hero Section === */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;

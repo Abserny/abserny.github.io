@@ -96,9 +96,9 @@
     }
 }
 
-/* ============================================================
+/*
 ANNOUNCEMENT BAR, fixed above header
-============================================================ */
+*/
 
 .announce-bar {
     position: fixed;
@@ -220,9 +220,9 @@ to   { transform: translateX(-50%); }
 
 
 
-/* ============================================================
+/*
 ABOUT PAGE, TEAM BANNER HERO
-============================================================ */
+*/
 
 .tb-hero {
     position: relative;
@@ -353,9 +353,9 @@ to   { opacity: 1; transform: translateY(0); }
 50%       { transform: translateX(-50%) translateY(6px); }
 }
 
-/* ============================================================
+/*
 ABOUT, SPLIT STORY SECTION
-============================================================ */
+*/
 
 .about-split-section {
     padding: var(--spacing-xl) 0;
@@ -405,9 +405,9 @@ ABOUT, SPLIT STORY SECTION
     font-style: italic;
 }
 
-/* ============================================================
+/*
 ABOUT, WHAT WE OFFER  (3 pillars)
-============================================================ */
+*/
 
 .about-pillars-section {
     padding: var(--spacing-xl) 0;
@@ -465,9 +465,9 @@ ABOUT, WHAT WE OFFER  (3 pillars)
     margin: 0;
 }
 
-/* ============================================================
+/*
 ABOUT, TEAM GRID (new style)
-============================================================ */
+*/
 
 .team-section {
     padding: var(--spacing-xl) 0;
@@ -545,9 +545,9 @@ ABOUT, TEAM GRID (new style)
     margin: 0.25rem 0 0;
 }
 
-/* ============================================================
+/*
 ABOUT PAGE, RESPONSIVE
-============================================================ */
+*/
 
 @media (max-width: 968px) {
     .about-split {
@@ -578,9 +578,9 @@ ABOUT PAGE, RESPONSIVE
     }
 }
 
-/* ============================================================
+/*
 STATS STRIP, install page
-============================================================ */
+*/
 
 .stats-strip-section {
     padding: 0 0 var(--spacing-lg);
@@ -689,9 +689,9 @@ STATS STRIP, install page
     }
 }
 
-/* ============================================================
+/*
 FSM PROCESS FLOW, Abserny
-============================================================ */
+*/
 
 .fsm-wrap {
     display: grid;
@@ -751,7 +751,7 @@ FSM PROCESS FLOW, Abserny
     transform: scale(1);
 }
 
-/* ── Generic screen container ── */
+/* Generic screen container */
 .fsm-scr {
     width: 100%;
     height: 100%;
@@ -764,7 +764,7 @@ FSM PROCESS FLOW, Abserny
     text-align: center;
 }
 
-/* ── BOOT screen ── */
+/* BOOT screen */
 .fsm-scr--boot {
     background: radial-gradient(ellipse at center, rgba(96,165,250,0.08) 0%, transparent 70%);
 }
@@ -856,7 +856,7 @@ FSM PROCESS FLOW, Abserny
     color: var(--accent-blue);
 }
 
-/* ── READY screen ── */
+/* READY screen */
 .fsm-scr--ready {
     background: radial-gradient(ellipse at center, rgba(96,165,250,0.05) 0%, transparent 70%);
 }
@@ -912,7 +912,7 @@ to   { transform: rotate(360deg); }
     font-size: 0.8rem;
 }
 
-/* ── SCANNING screen ── */
+/* SCANNING screen */
 .fsm-scr--scanning {
     gap: 1rem;
 }
@@ -987,7 +987,7 @@ to   { transform: rotate(360deg); }
     text-transform: uppercase;
 }
 
-/* ── SPEAKING screen ── */
+/* SPEAKING screen */
 .fsm-scr--speaking {
     background: radial-gradient(ellipse at center, rgba(52,211,153,0.06) 0%, transparent 70%);
 }
@@ -1029,7 +1029,7 @@ to   { transform: rotate(360deg); }
     letter-spacing: 0.08em;
 }
 
-/* ── ERROR screen ── */
+/* ERROR screen */
 .fsm-scr--error {
     background: radial-gradient(ellipse at center, rgba(248,113,113,0.08) 0%, transparent 70%);
 }
@@ -1066,7 +1066,7 @@ to   { transform: rotate(360deg); }
     line-height: 1.6;
 }
 
-/* ── Right panel: state list ── */
+/* Right panel: state list */
 .fsm-right {
     display: flex;
     flex-direction: column;
@@ -1160,7 +1160,7 @@ to   { transform: rotate(360deg); }
         );
 }
 
-/* ── Info panel ── */
+/* Info panel */
 .fsm-info-panel {
     padding: 1.25rem 1.5rem;
     background: var(--card-bg);
@@ -1197,7 +1197,7 @@ to   { transform: rotate(360deg); }
     letter-spacing: 0.04em;
 }
 
-/* ── Responsive ── */
+/* Responsive */
 @media (max-width: 968px) {
     .fsm-wrap {
         grid-template-columns: 1fr;
@@ -1208,9 +1208,9 @@ to   { transform: rotate(360deg); }
     }
 }
 
-/* ============================================================
+/*
 HERO VISUAL, camera POV simulation
-============================================================ */
+*/
 
 .hero-visual {
     position: relative;

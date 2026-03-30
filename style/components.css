@@ -1,4 +1,4 @@
-/* === Buttons === */
+/* Buttons */
 .cta-button,
 .btn-primary,
 .btn-secondary {
@@ -33,7 +33,7 @@
     background: rgba(96, 165, 250, 0.25);
 }
 
-/* === Sections === */
+/* Sections */
 section {
     padding: 5rem 0;
     position: relative;
@@ -56,7 +56,7 @@ section {
     line-height: 1.8;
 }
 
-/* === Cards === */
+/* Cards */
 .card,
 .about-card,
 .feature,
@@ -104,7 +104,7 @@ section {
     font-size: 1rem;
 }
 
-/* === Grids === */
+/* Grids */
 .about-grid,
 .features-grid,
 .tech-grid,
@@ -116,7 +116,7 @@ section {
     margin-top: var(--spacing-lg);
 }
 
-/* === Process Flow Animation === */
+/* Process Flow Animation */
 
 .back-link {
     display: inline-block;
@@ -131,7 +131,7 @@ section {
     transform: translateX(-5px);
 }
 
-/* === Mobile App Release Page === */
+/* Mobile App Release Page */
 .mobile-release-hero {
     margin-top: 0;
     padding: calc(var(--header-height) + var(--spacing-lg)) 0 var(--spacing-lg);
@@ -381,7 +381,7 @@ section {
     }
 }
 
-/* === FSM Animation States (Process Flow) === */
+/* FSM Animation States (Process Flow) */
 
 /* Boot screen sub-text */
 .init-sub {
@@ -563,9 +563,9 @@ code {
 }
 
 
-/* ============================================================
+/*
 EDITORIAL LIST LAYOUT
-============================================================ */
+*/
 
 .editorial-list {
     margin-top: var(--spacing-lg);
@@ -612,9 +612,9 @@ EDITORIAL LIST LAYOUT
     max-width: 680px;
 }
 
-/* ============================================================
+/*
 DEFINITION ROWS
-============================================================ */
+*/
 
 .def-list {
     margin-top: var(--spacing-lg);
@@ -646,9 +646,9 @@ DEFINITION ROWS
     line-height: 1.7;
 }
 
-/* ============================================================
+/*
 MODE STRIPE ROWS
-============================================================ */
+*/
 
 .mode-list {
     margin-top: var(--spacing-lg);
@@ -701,9 +701,9 @@ MODE STRIPE ROWS
     padding-top: 0.2rem;
 }
 
-/* ============================================================
+/*
 RELEASES PAGE, SECTION LABELS
-============================================================ */
+*/
 
 .releases-section {
     padding: 4rem 0 0;
@@ -736,9 +736,9 @@ RELEASES PAGE, SECTION LABELS
     margin: 0;
 }
 
-/* ============================================================
+/*
 ACCORDION (new clean implementation)
-============================================================ */
+*/
 
 .accordion {
     /* top border provided by section-label's bottom border */
@@ -883,9 +883,9 @@ ACCORDION (new clean implementation)
     color: var(--text-primary);
 }
 
-/* ============================================================
+/*
    VISION SECTION — CTA sections used across all pages
-   ============================================================ */
+ */
 
 .vision-section {
     background: linear-gradient(to bottom, var(--bg-navy), var(--bg-dark));
@@ -905,9 +905,9 @@ ACCORDION (new clean implementation)
     color: var(--text-secondary);
 }
 
-/* ============================================================
+/*
    RELEASE HERO — page header for releases page
-   ============================================================ */
+*/
 
 .release-hero {
     padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);

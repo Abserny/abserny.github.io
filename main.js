@@ -1,6 +1,6 @@
-// ─────────────────────────────────────────────────────────────
+//
 //  Abserny — hero detection animation (unchanged)
-// ─────────────────────────────────────────────────────────────
+//
 function animateHeroDetections() {
     const boxes = document.querySelectorAll(".hero-visual .detection-box");
     boxes.forEach(box => {
@@ -83,7 +83,7 @@ let modeIndex = 0;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// ── Screen builders ───────────────────────────────────────────
+// Screen builders
 
 function buildBootScreen(el) {
     el.innerHTML = `
@@ -189,7 +189,7 @@ function buildErrorScreen(el) {
 </div>`;
 }
 
-// ── State machine runner ──────────────────────────────────────
+// State machine runner
 
 function setActiveState(stateId) {
     document.querySelectorAll('.fsm-state').forEach(el => {
@@ -244,9 +244,9 @@ async function runFSM() {
     }
 }
 
-// ─────────────────────────────────────────────────────────────
+//
 //  DOMContentLoaded — init everything
-// ─────────────────────────────────────────────────────────────
+//
 document.addEventListener('DOMContentLoaded', function () {
 
     // Hero gradient background
@@ -266,10 +266,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// ─────────────────────────────────────────────────────────────
+//
 //  HERO VISUAL — camera POV simulation
 //  Cycles through scenes, draws detection boxes, speaks output
-// ─────────────────────────────────────────────────────────────
+//
 
 const HV_SCENES = [
     {
@@ -400,9 +400,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// ─────────────────────────────────────────────────────────────
+//
 //  HERO BACKGROUND — animated gradient, cursor reactive
-// ─────────────────────────────────────────────────────────────
+//
 function initHeroBg() {
     const hero = document.getElementById('hero');
     if (!hero) return;

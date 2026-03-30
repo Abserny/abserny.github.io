@@ -515,9 +515,9 @@ to   { transform: rotate(360deg); }
 
 
 
-/* ============================================================
+/*
 ANNOUNCEMENT BAR, fixed above header
-============================================================ */
+ */
 
 .announce-bar {
     position: fixed;
